@@ -7,7 +7,7 @@
 .wrapper {
     width: 1490px;
     height: 2600px;
-    margin: auto;
+    margin: auto;/* в качестве исключения дал */
 }
 .header {
     width: 1490px;
@@ -140,6 +140,7 @@
     }
 }
 .points {
+
     &__container {
         width: 899px;
         height: 234px;
@@ -157,8 +158,7 @@
     }
 }
 .points-item {
-    margin: auto;
-    text-align: center;
+   
     &__img {
         width: 99px;
         height: 99px;
@@ -247,11 +247,12 @@
 
     &__column {
         width: 188px;
+        margin: auto;
+        
     }
 }
 .howto-item {
-    margin: auto;
-    text-align: center;
+   
 
     &__avatar {
         margin: auto;
@@ -328,18 +329,15 @@
 }
 .mathhelp {
     width: 100%;
-    
+
     &__container {
         width: 1200px;
         display: flex;
-
-        
     }
 
     &__item {
-        margin: 118px 0px 0px 230px ;
+        margin: 118px 0px 0px 230px;
         width: 375px;
-        
     }
 
     &__title {
@@ -365,7 +363,6 @@
         margin-left: 50px;
         width: 775px;
         height: 513px;
-        
     }
 }
 .footer {
@@ -377,11 +374,11 @@
 
     background-color: #5f5b88;
     &__logo {
-        margin-left:225px
+        margin-left: 225px;
     }
 
     &__copyright {
-        @include fonts($regular,$fSmall,$white);
+        @include fonts($regular, $fSmall, $white);
         margin-right: 225px;
     }
 }
