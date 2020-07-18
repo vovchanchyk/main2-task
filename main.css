@@ -1,0 +1,477 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+@font-face {
+  font-family: "Segoe UI light";
+  src: url("./fonts/SegoeUI-Light.eot");
+  src: local("Segoe UI Light"), local("SegoeUI-Light"), url("SegoeUI-Light.eot?#iefix") format("embedded-opentype"), url("SegoeUI-Light.woff") format("woff"), url("SegoeUI-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Segoe UI regular";
+  src: url("./fonts/SegoeUI.eot");
+  src: local("Segoe UI"), local("SegoeUI"), url("SegoeUI.eot?#iefix") format("embedded-opentype"), url("SegoeUI.woff") format("woff"), url("SegoeUI.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Segoe UI semibold";
+  src: url("./fonts/SegoeUI-SemiBold.eot");
+  src: local("Segoe UI Semibold"), local("SegoeUI-SemiBold"), url("SegoeUI-SemiBold.eot?#iefix") format("embedded-opentype"), url("SegoeUI-SemiBold.woff") format("woff"), url("SegoeUI-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Segoe UI bold";
+  src: url("./fonts/SegoeUI-Bold.eot");
+  src: local("Segoe UI Bold"), local("SegoeUI-Bold"), url("SegoeUI-Bold.eot?#iefix") format("embedded-opentype"), url("SegoeUI-Bold.woff") format("woff"), url("SegoeUI-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+.wrapper {
+  width: 1490px;
+  height: 2600px;
+  margin: auto;
+}
+
+.header {
+  width: 1490px;
+  height: 652px;
+  background-image: url(./img/header/background.png);
+}
+.header__container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 75%;
+}
+.header__top {
+  width: 1100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 23px 0px 0px 220px;
+}
+.header__menu {
+  width: 392px;
+  display: flex;
+  justify-content: space-between;
+}
+.header__menu-item {
+  font-family: "Segoe UI semibold";
+  font-size: "Segoe UI regular";
+  color: #fff;
+}
+.header__menu-item::after {
+  content: url(./img/header/Arrow.png);
+  padding-left: 10px;
+}
+.header__btn-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 107px;
+  height: 37px;
+  border-radius: 19px;
+  background-color: #5cb85c;
+  font-family: "Segoe UI semibold";
+  font-size: 14px;
+  color: #fff;
+}
+.header__btn-top::before {
+  content: url(./img/header/Icon_button.png);
+  padding-right: 5px;
+  margin-top: 5px;
+}
+.header__banner {
+  margin: 195px 0px 0px 240px;
+  width: 1048px;
+  height: 298px;
+}
+.header__title {
+  text-align: center;
+  font-family: "Segoe UI light";
+  font-size: 36px;
+  color: #fff;
+}
+.header__title--bold {
+  font-family: "Segoe UI semibold";
+}
+.header__subtitle {
+  margin-top: 15px;
+  text-align: center;
+  font-family: "Segoe UI regular";
+  font-size: 18px;
+  color: #fff;
+}
+.header__search {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 95px;
+}
+.header__btn-banner {
+  margin: 70px auto;
+}
+
+.logo {
+  width: 167px;
+  height: 26px;
+}
+
+.search-form__item {
+  width: 289px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #001e2d;
+  position: relative;
+}
+.search-form__button {
+  background: transparent;
+  padding-left: 15px;
+}
+.search-form__input {
+  padding-left: 15px;
+  background: transparent;
+  font-family: "Segoe UI semibold";
+  font-size: 14px;
+  color: #fff;
+  opacity: 100%;
+}
+.search-form__arrow {
+  position: absolute;
+  right: 15px;
+}
+
+.btn-become {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 180px;
+  height: 37px;
+  border-radius: 19px;
+  padding-bottom: 3px;
+  background-color: #5cb85c;
+  font-family: "Segoe UI semibold";
+  font-size: 14px;
+  color: #fff;
+}
+.btn-become::before {
+  content: url(./img/header/Icon_button.png);
+  padding-right: 7px;
+  margin-top: 3px;
+}
+
+.points__container {
+  width: 899px;
+  height: 234px;
+  display: flex;
+  justify-content: space-between;
+  margin: 81px auto 0px;
+}
+.points__column {
+  width: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.points-item {
+  margin: auto;
+  text-align: center;
+}
+.points-item__img {
+  width: 99px;
+  height: 99px;
+  margin: auto;
+}
+.points-item__title {
+  font-family: "Segoe UI bold";
+  font-size: 28px;
+  color: #817bba;
+  margin-top: 37px;
+}
+.points-item__text {
+  margin-top: 25px;
+  font-family: "Segoe UI regular";
+  font-size: 14px;
+  color: #424242;
+  line-height: 24px;
+}
+
+.quote {
+  width: 100%;
+  height: 269px;
+  background: #fbfbfd;
+}
+.quote__container {
+  width: 502px;
+  margin: calc(97px + 52px) auto 50px;
+}
+.quote__text {
+  padding-top: 35px;
+  font-family: "Segoe UI regular";
+  font-size: 16px;
+  color: #424242;
+  font-style: italic;
+  text-align: center;
+  line-height: 30px;
+  width: 520px;
+}
+.quote__line {
+  text-align: center;
+  display: block;
+  margin: 28px auto;
+}
+.quote__title {
+  font-family: "Segoe UI regular";
+  font-size: 14px;
+  color: #424242;
+  text-transform: uppercase;
+  margin-top: 26px;
+  text-align: center;
+}
+.quote__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 204px;
+  height: 43px;
+  border-radius: 22px;
+  font-family: "Segoe UI semibold";
+  font-size: 16px;
+  color: #424242;
+  border: 1px solid #7e7ab6;
+  margin: 26px auto;
+}
+.quote__btn::before {
+  content: url(./img/mid/quote/View_eye.png);
+  padding-right: 5px;
+  margin-top: 5px;
+}
+
+.howto {
+  width: 100%;
+  height: 500px;
+  padding-top: 79px;
+}
+.howto__container {
+  margin: auto;
+  width: 1076px;
+  height: 319px;
+}
+.howto__title {
+  font-family: "Segoe UI regular";
+  font-size: 36px;
+  color: #424242;
+  text-align: center;
+}
+.howto__row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 76px;
+}
+.howto__column {
+  width: 188px;
+}
+
+.howto-item {
+  margin: auto;
+  text-align: center;
+}
+.howto-item__avatar {
+  margin: auto;
+  border: #817bba dashed 1px;
+  border-radius: 50%;
+  width: 133px;
+  height: 133px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.howto-item__img {
+  width: 45px;
+  height: 48px;
+}
+.howto-item__text {
+  margin-top: 36px;
+  font-family: "Segoe UI regular";
+  font-size: 14px;
+  color: #424242;
+  line-height: 24px;
+}
+.howto-item__text--blue {
+  font-family: "Segoe UI bold";
+  color: #817bba;
+}
+
+.partners {
+  width: 100%;
+  height: 213px;
+  background: #fbfbfd;
+  padding-top: 40px;
+}
+.partners__container {
+  width: 860px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+}
+.partners__line {
+  display: block;
+}
+.partners__item {
+  width: 305px;
+  height: 93px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.partners__title {
+  font-family: "Segoe UI bold";
+  font-size: 28px;
+  color: #817bba;
+}
+.partners__text {
+  font-family: "Segoe UI regular";
+  font-size: 14px;
+  color: #424242;
+  line-height: 24px;
+}
+.partners__text--blue {
+  color: #817bba;
+}
+
+.sylvan-logo {
+  width: 205px;
+}
+
+.kaplan-logo {
+  width: 204px;
+  height: 68px;
+}
+
+.mathhelp {
+  width: 100%;
+}
+.mathhelp__container {
+  width: 1200px;
+  display: flex;
+}
+.mathhelp__item {
+  margin: 118px 0px 0px 230px;
+  width: 375px;
+}
+.mathhelp__title {
+  font-family: "Segoe UI light";
+  font-size: 36px;
+  color: #424242;
+  width: 255px;
+}
+.mathhelp__text {
+  width: 379px;
+  height: 120px;
+  line-height: 30px;
+  font-family: "Segoe UI regular";
+  font-size: 16px;
+  color: #424242;
+  margin-top: 49px;
+}
+.mathhelp__btn {
+  margin-top: 50px;
+  width: 192px;
+  border-radius: 18px;
+}
+.mathhelp__img {
+  margin-left: 50px;
+  width: 775px;
+  height: 513px;
+}
+
+.footer {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #5f5b88;
+}
+.footer__logo {
+  margin-left: 225px;
+}
+.footer__copyright {
+  font-family: "Segoe UI regular";
+  font-size: 14px;
+  color: #fff;
+  margin-right: 225px;
+}
+
+/*# sourceMappingURL=main.css.map */

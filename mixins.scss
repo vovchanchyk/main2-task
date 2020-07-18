@@ -1,0 +1,8 @@
+@mixin fonts( $ff, $fs, $fc) {
+   font-family:$ff ;
+    font-size: $fs;
+    color:$fc;
+    
+}
+
+

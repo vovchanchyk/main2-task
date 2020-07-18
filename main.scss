@@ -1,0 +1,387 @@
+@import "zero.scss";
+@import "fonts.scss";
+@import "patterns.scss";
+@import "mixins.scss";
+@import "varibles.scss";
+
+.wrapper {
+    width: 1490px;
+    height: 2600px;
+    margin: auto;
+}
+.header {
+    width: 1490px;
+    height: 652px;
+    background-image: url(./img/header/background.png);
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        opacity: 75%;
+    }
+
+    &__top {
+        width: 1100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 23px 0px 0px 220px;
+    }
+
+    &__menu {
+        width: 392px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__menu-item {
+        @include fonts($semibold, $regular, $white);
+        &::after {
+            content: url(./img/header/Arrow.png);
+            padding-left: 10px;
+        }
+    }
+
+    &__btn-top {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 107px;
+        height: 37px;
+        border-radius: 19px;
+        background-color: $fern;
+        @include fonts($semibold, $fSmall, $white);
+        &::before {
+            content: url(./img/header/Icon_button.png);
+            padding-right: 5px;
+            margin-top: 5px;
+        }
+    }
+
+    &__banner {
+        margin: 195px 0px 0px 240px;
+        width: 1048px;
+        height: 298px;
+    }
+
+    &__title {
+        text-align: center;
+        @include fonts($light, $biggest, $white);
+    }
+
+    &__title--bold {
+        font-family: $semibold;
+    }
+
+    &__subtitle {
+        margin-top: 15px;
+        text-align: center;
+        @include fonts($regular, $fregular, $white);
+    }
+
+    &__search {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 95px;
+    }
+
+    &__btn-banner {
+        margin: 70px auto;
+    }
+}
+.logo {
+    width: 167px;
+    height: 26px;
+}
+
+.search-form {
+    &__item {
+        width: 289px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #001e2d;
+        position: relative;
+    }
+
+    &__button {
+        background: transparent;
+        padding-left: 15px;
+    }
+
+    &__input {
+        padding-left: 15px;
+        background: transparent;
+        @include fonts($semibold, $fSmall, $white);
+        opacity: 100%;
+    }
+
+    &__arrow {
+        position: absolute;
+        right: 15px;
+    }
+}
+.btn-become {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 37px;
+    border-radius: 19px;
+    padding-bottom: 3px;
+    background-color: $fern;
+    @include fonts($semibold, $fSmall, $white);
+    &::before {
+        content: url(./img/header/Icon_button.png);
+        padding-right: 7px;
+        margin-top: 3px;
+    }
+}
+.points {
+    &__container {
+        width: 899px;
+        height: 234px;
+        display: flex;
+        justify-content: space-between;
+        margin: 81px auto 0px;
+    }
+
+    &__column {
+        width: 160px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.points-item {
+    margin: auto;
+    text-align: center;
+    &__img {
+        width: 99px;
+        height: 99px;
+        margin: auto;
+    }
+
+    &__title {
+        @include fonts($bold, $Fbig, $blue);
+        margin-top: 37px;
+    }
+
+    &__text {
+        margin-top: 25px;
+        @include fonts($regular, $fSmall, $capeCod);
+        line-height: 24px;
+    }
+}
+.quote {
+    width: 100%;
+    height: 269px;
+    background: #fbfbfd;
+    &__container {
+        width: 502px;
+        margin: calc(97px + 52px) auto 50px;
+    }
+
+    &__text {
+        padding-top: 35px;
+        @include fonts($regular, $normal, $capeCod);
+        font-style: italic;
+        text-align: center;
+        line-height: 30px;
+        width: 520px;
+    }
+
+    &__line {
+        text-align: center;
+        display: block;
+        margin: 28px auto;
+    }
+
+    &__title {
+        @include fonts($regular, $fSmall, $capeCod);
+        text-transform: uppercase;
+        margin-top: 26px;
+        text-align: center;
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 204px;
+        height: 43px;
+        border-radius: 22px;
+        @include fonts($semibold, $normal, $capeCod);
+        border: 1px solid #7e7ab6;
+        margin: 26px auto;
+        &::before {
+            content: url(./img/mid/quote/View_eye.png);
+            padding-right: 5px;
+            margin-top: 5px;
+        }
+    }
+}
+.howto {
+    width: 100%;
+    height: 500px;
+    padding-top: 79px;
+    &__container {
+        margin: auto;
+        width: 1076px;
+        height: 319px;
+    }
+
+    &__title {
+        @include fonts($regular, $biggest, $capeCod);
+        text-align: center;
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 76px;
+    }
+
+    &__column {
+        width: 188px;
+    }
+}
+.howto-item {
+    margin: auto;
+    text-align: center;
+
+    &__avatar {
+        margin: auto;
+        border: $blue dashed 1px;
+        border-radius: 50%;
+        width: 133px;
+        height: 133px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__img {
+        width: 45px;
+        height: 48px;
+    }
+
+    &__text {
+        margin-top: 36px;
+        @include fonts($regular, $fSmall, $capeCod);
+        line-height: 24px;
+    }
+
+    &__text--blue {
+        font-family: $bold;
+        color: $blue;
+    }
+}
+.partners {
+    width: 100%;
+    height: 213px;
+    background: #fbfbfd;
+    padding-top: 40px;
+
+    &__container {
+        width: 860px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto;
+    }
+
+    &__line {
+        display: block;
+    }
+
+    &__item {
+        width: 305px;
+        height: 93px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__title {
+        @include fonts($bold, $Fbig, $blue);
+    }
+
+    &__text {
+        @include fonts($regular, $fSmall, $capeCod);
+        line-height: 24px;
+    }
+
+    &__text--blue {
+        color: $blue;
+    }
+}
+.sylvan-logo {
+    width: 205px;
+}
+.kaplan-logo {
+    width: 204px;
+    height: 68px;
+}
+.mathhelp {
+    width: 100%;
+    
+    &__container {
+        width: 1200px;
+        display: flex;
+
+        
+    }
+
+    &__item {
+        margin: 118px 0px 0px 230px ;
+        width: 375px;
+        
+    }
+
+    &__title {
+        @include fonts($light, $biggest, $capeCod);
+        width: 255px;
+    }
+
+    &__text {
+        width: 379px;
+        height: 120px;
+        line-height: 30px;
+        @include fonts($regular, $normal, $capeCod);
+        margin-top: 49px;
+    }
+
+    &__btn {
+        margin-top: 50px;
+        width: 192px;
+        border-radius: 18px;
+    }
+
+    &__img {
+        margin-left: 50px;
+        width: 775px;
+        height: 513px;
+        
+    }
+}
+.footer {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #5f5b88;
+    &__logo {
+        margin-left:225px
+    }
+
+    &__copyright {
+        @include fonts($regular,$fSmall,$white);
+        margin-right: 225px;
+    }
+}
