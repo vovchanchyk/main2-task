@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
@@ -98,10 +99,11 @@ img {
   width: 1490px;
   height: 2600px;
   margin: auto;
+  /* в качестве исключения дал */
 }
 
 .header {
-  width: 1490px;
+  width: 100%;
   height: 652px;
   background-image: url(./img/header/background.png);
 }
@@ -237,14 +239,13 @@ img {
   margin: 81px auto 0px;
 }
 .points__column {
-  width: 160px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .points-item {
-  margin: auto;
+  width: 160px;
   text-align: center;
 }
 .points-item__img {
@@ -264,6 +265,7 @@ img {
   font-size: 14px;
   color: #424242;
   line-height: 24px;
+  text-align: center;
 }
 
 .quote {
@@ -340,12 +342,9 @@ img {
 }
 .howto__column {
   width: 188px;
+  margin: auto;
 }
 
-.howto-item {
-  margin: auto;
-  text-align: center;
-}
 .howto-item__avatar {
   margin: auto;
   border: #817bba dashed 1px;
@@ -362,6 +361,7 @@ img {
 }
 .howto-item__text {
   margin-top: 36px;
+  text-align: center;
   font-family: "Segoe UI regular";
   font-size: 14px;
   color: #424242;
