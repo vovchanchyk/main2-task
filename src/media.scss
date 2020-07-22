@@ -1,0 +1,153 @@
+@import "./fonts.scss";
+
+@media screen and (max-width: 370px) {
+  .wrapper {
+    width: 370px;
+  }
+  .header {
+    width: 370px;
+    background-image: none;
+
+    &__container {
+      width: 370px;
+      opacity: 100%;
+    }
+
+    &__top {
+      width: 90%;
+      height: 560px;
+      flex-direction: column;
+      justify-content: space-between;
+      margin: 20px auto;
+    }
+
+    &__logo {
+      width: 60%;
+    }
+
+    &__menu {
+      display: none;
+    }
+
+    &__banner {
+      display: none;
+    }
+  }
+  .logo {
+    width: 60%;
+  }
+  .mobile-btn {
+    display: block;
+    font-family: $regular;
+    position: fixed;
+    top: 13px;
+    color:wheat;
+    right: 25px;
+    height: 30px;
+    width: 30px;
+    z-index: 3;
+    background-image:url(./../img/header/icons8-меню-100.png)  ;
+    background-size: contain;
+    border-radius: 50%;
+  }
+  .mobile-btn--active{
+      background-image:url(./../img/header/icons8-закрыть-окно-100.png)
+  }
+
+  .points {
+    width: 370px;
+    &__container {
+      width: 100%;
+      height: auto;
+      flex-direction: column;
+    }
+  }
+
+  .quote {
+    width: 100%;
+    &__container {
+      text-align: center;
+      width: 100%;
+      margin: 40px auto;
+    }
+
+    &__text {
+      width: 97%;
+    }
+  }
+  .howto {
+    width: 100%;
+    height: auto;
+    &__container {
+      width: 100%;
+      height: auto;
+    }
+
+    &__row {
+      flex-direction: column;
+    }
+
+    &__column {
+      padding-top: 20px;
+    }
+  }
+
+  .partners {
+    width: 100%;
+    height: auto;
+    &__container {
+      width: 100%;
+      flex-direction: column;
+    }
+
+    &__line {
+      display: none;
+    }
+
+    &__item {
+      text-align: center;
+      margin-top: 40px;
+    }
+  }
+
+  .sylvan-logo {
+    margin-top: 40px;
+  }
+  .kaplan-logo {
+    margin-top: 40px;
+  }
+  .mathhelp {
+    width: 370px;
+
+    &__container {
+      width: 100%;
+      flex-direction: column;
+    }
+
+    &__item {
+      margin: 40px auto;
+    }
+
+    &__text {
+      padding-top: 10px;
+    }
+
+    &__img {
+      margin: 0;
+      width: 340px;
+      height: 280px;
+    }
+  }
+  .footer {
+    flex-direction: column;
+    width: 100%;
+    &__logo {
+      margin: auto;
+    }
+
+    &__copyright {
+      margin: auto;
+    }
+  }
+}
+

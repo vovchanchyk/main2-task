@@ -4,11 +4,10 @@
 @import "./src/mixins.scss";
 @import "./src/varibles.scss";
 
-
 .wrapper {
   width: 1490px;
   height: 2600px;
-  margin: auto; /* в качестве исключения дал */
+  margin: auto; /*в качестве исключения дал */
 }
 .header {
   width: 100%;
@@ -146,6 +145,7 @@
     height: 234px;
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
     margin: 81px auto 0px;
   }
 
@@ -381,3 +381,20 @@
     margin-right: 225px;
   }
 }
+
+.mobile-menu--hidden {
+  display: none;
+}
+.mobile-menu--show{
+  display: none;
+}
+.mobile-btn {
+  display: none;
+  
+}
+
+@import "./src/media.scss";
+
+
+@import "./src/show-menu.scss";
+
