@@ -490,10 +490,6 @@ img {
   display: none;
 }
 
-.mobile-menu--show {
-  display: none;
-}
-
 .mobile-btn {
   display: none;
 }
@@ -645,12 +641,20 @@ img {
   .mathhelp__container {
     width: 100%;
     flex-direction: column;
+    margin: auto;
   }
   .mathhelp__item {
     margin: 40px auto;
   }
   .mathhelp__text {
     padding-top: 10px;
+    text-align: center;
+  }
+  .mathhelp__title {
+    margin: auto;
+  }
+  .mathhelp__btn {
+    margin: 30px auto;
   }
   .mathhelp__img {
     margin: 0;

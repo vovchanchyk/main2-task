@@ -385,16 +385,11 @@
 .mobile-menu--hidden {
   display: none;
 }
-.mobile-menu--show{
-  display: none;
-}
+
 .mobile-btn {
   display: none;
-  
 }
 
 @import "./src/media.scss";
 
-
 @import "./src/show-menu.scss";
-

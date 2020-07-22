@@ -1,60 +1,69 @@
 .mobile-menu--show {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  width: 97%;
+  height: 100%;
+  background-color: #001e2d;
+}
+.mobile-menu {
+  &__list {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    position: fixed;
-    z-index: 1;
-    width: 97%;
-    height: 100%;
-    background-color: #001e2d;
   }
-  .mobile-menu {
-    &__list {
-      display: flex;
-      flex-direction: column;
-    }
-  }
-  .mobile {
-    &__menu-item {
-      margin-top: 30px;
-      @include fonts($semibold, $fbig, $white);
-      border-bottom: solid $white;
-      padding-bottom: 8px;
-    }
-  }
-  .mobile-search {
-    width: 90%;
-    margin-bottom: 90px;
-    padding-bottom: 10px;
-  
-    display: flex;
-    justify-content: space-between;
+}
+.mobile {
+  &__menu-item {
+    margin-top: 30px;
+    @include fonts($semibold, $fbig, $white);
     border-bottom: solid $white;
-  
-    &__btn {
-      background: transparent;
-      padding-left: 10px;
+    padding-bottom: 8px;
+  }
+}
+.mobile-search {
+  width: 90%;
+  margin-bottom: 90px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid $white;
+
+  &__btn {
+    background: transparent;
+    padding-left: 10px;
+  }
+
+  &__input {
+    background: transparent;
+    width: 70%;
+    &::-webkit-input-placeholder {
+      font-size: 20px;
+      font-family: $regular;
     }
-  
-    &__input {
-      background: transparent;
-      width: 70%;
-      &::-webkit-input-placeholder { font-size: 20px; font-family:$regular;}
-      &::-moz-placeholder { font-size: 20px; font-family:$regular;}
-      &:-ms-input-placeholder { font-size: 20px; font-family:$regular;}
-      &:-moz-placeholder { font-size: 20px; font-family:$regular;}
-  
-  
+    &::-moz-placeholder {
+      font-size: 20px;
+      font-family: $regular;
     }
-  
-    &__arrow {
-      padding-right: 10px;
+    &:-ms-input-placeholder {
+      font-size: 20px;
+      font-family: $regular;
+    }
+    &:-moz-placeholder {
+      font-size: 20px;
+      font-family: $regular;
     }
   }
 
-  @media screen and(min-width:370px){
-      .mobile-menu--show{
-          display: none;
-      }
+  &__arrow {
+    padding-right: 10px;
   }
+}
+
+@media screen and(min-width:370px) {
+  .mobile-menu--show {
+    display: none;
+  }
+}
