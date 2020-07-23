@@ -6,7 +6,7 @@
   }
   .header {
     width: 370px;
-    background-size:cover;
+    background-size: cover;
 
     &__container {
       width: 370px;
@@ -18,7 +18,7 @@
       height: 560px;
       flex-direction: column;
       justify-content: space-between;
-      margin: 20px auto;
+      margin: 30px auto;
     }
 
     &__logo {
@@ -36,62 +36,76 @@
   .logo {
     width: 60%;
   }
-  .mobile-btn{
-    display: block;
-    background:transparent;
+  .mobile-btn {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
     width: 35px;
     height: 35px;
     position: fixed;
     z-index: 3;
-    top: 20px;
-    right: 30px;
-
+    top: 25px;
+    right: 40px;
+    
     &__img{
       display: block;
-      width: 25px;
+      width: 20px;
       height: 3px;
-      background-color: $capeCod;
-      margin:17px auto; 
-      position: relative;
-      z-index: 4;
-      &::before{
-        content: "";
-        display: block;
-        width: 25px;
-        height: 3px;
-        transform: translateY(-7px);
-        background-color: $capeCod;
-        position: absolute;
-        
-      }
-      &::after{
-        content: "";
-        display: block;
-        width: 25px;
-        height: 3px;
-        transform: translateY(7px);
-        background-color: $capeCod;  
-        position: absolute;
-      }
-    }
-    &__img--active{
+      background-color: $white;
       visibility: hidden;
+      
+      &::before,
+      &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: $white; 
+        visibility: visible; 
+        position: absolute;
+      }
       &::before{
-        visibility: visible;
         transform: rotate(45deg);
-        top: 12;
-        background-color:$white;
+        top: 8;
+        left: 0;
+
       
       }
       &::after{
-        visibility: visible;
         transform: rotate(-45deg);
-        bottom: 9;  
-        background-color:$white;
+        bottom: 8;
+        left: 0;
       }
     }
-  }
 
+    .close {
+      display: block;
+      width: 80%;
+      height: 3px;
+      background-color: $white;
+      visibility: visible; 
+      border-bottom: solid 0.5px black;
+      &::before,
+      &::after {
+        content: "";
+        display: block;
+        width: 80%;
+        height: 3px;
+        background-color: $white; 
+        margin-left: 4px; 
+        border-bottom: solid 0.5px black;
+      }
+      &::before{ 
+        transform: translateY(-8px);
+      }
+      &::after{
+        transform: translateY(8px);
+      }
+    }
+   
+  }
 
   .points {
     width: 370px;
@@ -103,8 +117,8 @@
   }
 
   .quote {
-    width:370px;
-    
+    width: 370px;
+
     &__container {
       width: 100%;
       text-align: center;
@@ -124,7 +138,7 @@
     }
 
     &__row {
-    flex-direction: column;
+      flex-direction: column;
     }
 
     &__column {
@@ -162,7 +176,7 @@
     &__container {
       width: 100%;
       flex-direction: column;
-      margin:60px auto 0px;
+      margin: 60px auto 0px;
     }
 
     &__item {

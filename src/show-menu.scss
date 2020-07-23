@@ -1,8 +1,11 @@
-.mobile-menu--show {
+
+
+.mobile-menu {
   width: 90%;
-  height: 90%;
+  height: 95%;
   position: fixed;
   z-index: 1;
+  top: 10px;
   background-color: #3f4350;
   display: flex;
   flex-direction: column;
@@ -60,8 +63,12 @@
   }
 }
 
+ .hidden{
+  display: none;
+}
+
 @media screen and(min-width:370px) {
-  .mobile-menu--show {
+  .mobile-menu {
     display: none;
   }
 }
