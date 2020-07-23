@@ -1,64 +1,62 @@
 .mobile-menu--show {
+  width: 90%;
+  height: 90%;
+  position: fixed;
+  z-index: 1;
+  background-color: #3f4350;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  position: fixed;
-  z-index: 1;
-  width: 97%;
-  height: 100%;
-  background-color: #001e2d;
-}
-.mobile-menu {
+  border: solid wheat 1px;
+
   &__list {
+    @include fonts($semibold, $fregular, $white);
     display: flex;
     flex-direction: column;
+    text-align: center;
   }
-}
-.mobile {
-  &__menu-item {
-    margin-top: 30px;
+
+  &__item {
+    margin-top: 20px;
     @include fonts($semibold, $fbig, $white);
-    border-bottom: solid $white;
-    padding-bottom: 8px;
   }
-}
-.mobile-search {
-  width: 90%;
-  margin-bottom: 90px;
-  padding-bottom: 10px;
-  display: flex;
-  justify-content: space-between;
-  border-bottom: solid $white;
+
+  &__form {
+    border-bottom: solid wheat 1px;
+    padding-bottom: 5px;
+    display: flex;
+    align-items: center;
+  }
 
   &__btn {
     background: transparent;
-    padding-left: 10px;
+    color: $white;
+    width: 20px;
+    height: 20px;
   }
 
   &__input {
     background: transparent;
-    width: 70%;
+    padding-left: 10px;
     &::-webkit-input-placeholder {
-      font-size: 20px;
-      font-family: $regular;
+      font-size: 16px;
+      font-family: 'Segoe UI';
     }
     &::-moz-placeholder {
-      font-size: 20px;
-      font-family: $regular;
+      font-size: 16px;
     }
     &:-ms-input-placeholder {
-      font-size: 20px;
-      font-family: $regular;
+      font-size: 16px;
     }
     &:-moz-placeholder {
-      font-size: 20px;
-      font-family: $regular;
+      font-size: 16px;
     }
   }
 
   &__arrow {
-    padding-right: 10px;
+    padding-right: 15px;
+    
   }
 }
 

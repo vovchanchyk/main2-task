@@ -486,7 +486,7 @@ img {
   margin-right: 225px;
 }
 
-.mobile-menu--hidden {
+.mobile-menu {
   display: none;
 }
 
@@ -529,11 +529,11 @@ img {
 
   .header {
     width: 370px;
-    background-image: none;
+    background-size: cover;
   }
   .header__container {
     width: 370px;
-    opacity: 100%;
+    opacity: none;
   }
   .header__top {
     width: 90%;
@@ -558,21 +558,55 @@ img {
 
   .mobile-btn {
     display: block;
-    font-family: "Segoe UI regular";
+    background: transparent;
+    width: 35px;
+    height: 35px;
     position: fixed;
-    top: 13px;
-    color: wheat;
-    right: 25px;
-    height: 30px;
-    width: 30px;
     z-index: 3;
-    background-image: url(./../img/header/icons8-меню-100.png);
-    background-size: contain;
-    border-radius: 50%;
+    top: 20px;
+    right: 30px;
   }
-
-  .mobile-btn--active {
-    background-image: url(./../img/header/icons8-закрыть-окно-100.png);
+  .mobile-btn__img {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #424242;
+    margin: 17px auto;
+    position: relative;
+    z-index: 4;
+  }
+  .mobile-btn__img::before {
+    content: "";
+    display: block;
+    width: 25px;
+    height: 3px;
+    transform: translateY(-7px);
+    background-color: #424242;
+    position: absolute;
+  }
+  .mobile-btn__img::after {
+    content: "";
+    display: block;
+    width: 25px;
+    height: 3px;
+    transform: translateY(7px);
+    background-color: #424242;
+    position: absolute;
+  }
+  .mobile-btn__img--active {
+    visibility: hidden;
+  }
+  .mobile-btn__img--active::before {
+    visibility: visible;
+    transform: rotate(45deg);
+    top: 12;
+    background-color: #fff;
+  }
+  .mobile-btn__img--active::after {
+    visibility: visible;
+    transform: rotate(-45deg);
+    bottom: 9;
+    background-color: #fff;
   }
 
   .points {
@@ -585,11 +619,11 @@ img {
   }
 
   .quote {
-    width: 100%;
+    width: 370px;
   }
   .quote__container {
-    text-align: center;
     width: 100%;
+    text-align: center;
     margin: 40px auto;
   }
   .quote__text {
@@ -612,7 +646,7 @@ img {
   }
 
   .partners {
-    width: 100%;
+    width: 370px;
     height: auto;
   }
   .partners__container {
@@ -641,7 +675,7 @@ img {
   .mathhelp__container {
     width: 100%;
     flex-direction: column;
-    margin: auto;
+    margin: 60px auto 0px;
   }
   .mathhelp__item {
     margin: 40px auto;
@@ -657,9 +691,9 @@ img {
     margin: 30px auto;
   }
   .mathhelp__img {
-    margin: 0;
+    margin: auto;
     width: 340px;
-    height: 280px;
+    height: 260px;
   }
 
   .footer {
@@ -674,65 +708,62 @@ img {
   }
 }
 .mobile-menu--show {
+  width: 90%;
+  height: 90%;
+  position: fixed;
+  z-index: 1;
+  background-color: #3f4350;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  position: fixed;
-  z-index: 1;
-  width: 97%;
-  height: 100%;
-  background-color: #001e2d;
+  border: solid wheat 1px;
 }
-
-.mobile-menu__list {
+.mobile-menu--show__list {
+  font-family: "Segoe UI semibold";
+  font-size: 18px;
+  color: #fff;
   display: flex;
   flex-direction: column;
+  text-align: center;
 }
-
-.mobile__menu-item {
-  margin-top: 30px;
+.mobile-menu--show__item {
+  margin-top: 20px;
   font-family: "Segoe UI semibold";
   font-size: 36px;
   color: #fff;
-  border-bottom: solid #fff;
-  padding-bottom: 8px;
 }
-
-.mobile-search {
-  width: 90%;
-  margin-bottom: 90px;
-  padding-bottom: 10px;
+.mobile-menu--show__form {
+  border-bottom: solid wheat 1px;
+  padding-bottom: 5px;
   display: flex;
-  justify-content: space-between;
-  border-bottom: solid #fff;
+  align-items: center;
 }
-.mobile-search__btn {
+.mobile-menu--show__btn {
+  background: transparent;
+  color: #fff;
+  width: 20px;
+  height: 20px;
+}
+.mobile-menu--show__input {
   background: transparent;
   padding-left: 10px;
 }
-.mobile-search__input {
-  background: transparent;
-  width: 70%;
+.mobile-menu--show__input::-webkit-input-placeholder {
+  font-size: 16px;
+  font-family: "Segoe UI";
 }
-.mobile-search__input::-webkit-input-placeholder {
-  font-size: 20px;
-  font-family: "Segoe UI regular";
+.mobile-menu--show__input::-moz-placeholder {
+  font-size: 16px;
 }
-.mobile-search__input::-moz-placeholder {
-  font-size: 20px;
-  font-family: "Segoe UI regular";
+.mobile-menu--show__input:-ms-input-placeholder {
+  font-size: 16px;
 }
-.mobile-search__input:-ms-input-placeholder {
-  font-size: 20px;
-  font-family: "Segoe UI regular";
+.mobile-menu--show__input:-moz-placeholder {
+  font-size: 16px;
 }
-.mobile-search__input:-moz-placeholder {
-  font-size: 20px;
-  font-family: "Segoe UI regular";
-}
-.mobile-search__arrow {
-  padding-right: 10px;
+.mobile-menu--show__arrow {
+  padding-right: 15px;
 }
 
 @media screen and (min-width: 370px) {

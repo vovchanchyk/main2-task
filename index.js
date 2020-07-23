@@ -1,8 +1,8 @@
 
 
 function showMenu(){
-    document.querySelector('.mobile-menu--hidden').classList.toggle('mobile-menu--show');
-    document.querySelector('.mobile-btn').classList.toggle('mobile-btn--active');
+    document.querySelector('.mobile-menu').classList.toggle('mobile-menu--show');
+    document.querySelector('.mobile-btn__img').classList.toggle('mobile-btn__img--active');
     
 }
 

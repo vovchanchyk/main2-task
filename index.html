@@ -20,26 +20,23 @@
                         <a href="#" class="header__menu-item">Homeschooling</a>
                     </nav>
                     <!-- меню для мобильной версии -->
-                    <button class="mobile-btn" onclick="showMenu()">
-                        <div class="mobile-btn__img"></div>
-                    </button>
-                    <div class="mobile-menu--hidden ">
-                        <nav class="mobile-menu__list">
-                            <a href="#" class="mobile__menu-item">Tutoring</a>
-                            <a href="#" class="mobile__menu-item">Test prep</a>
-                            <a href="#" class="mobile__menu-item">Homeschooling</a>
-                        </nav>
-                        <div class="mobile-search">
-                            <button class="mobile-search__btn"><img src="./img/header/Search.png" alt=""></button>
-                            <input type="text" class="mobile-search__input" placeholder="search">
-                            <img src="./img/header/Arrow.png" alt="" class="mobile-search__arrow">
-                        </div>
+                    <div class="mobile-btn" onclick="showMenu()">
+                         <span class="mobile-btn__img ">
+                        </span>
                     </div>
-
-
-
-
-
+                    <div class="mobile-menu">
+                        <nav class="mobile-menu--show__list">
+                            <a href="#" class="mobile-menu--show__item">Tutoring</a>
+                            <a href="#" class="mobile-menu--show__item">Test prep</a>
+                            <a href="#" class="mobile-menu--show__item">Homeschooling</a>
+                        </nav>
+                        <form action="" class="mobile-menu--show__form">
+                            <button class="mobile-menu--show__btn"><img src="./img/header/Search.png" alt=""></button>
+                            <input type="text" class="mobile-menu--show__input" placeholder="search">
+                            <img src="./img/header/Arrow.png" alt="" class="mobile-menu--show__arrow">
+                        </form>
+                    </div>
+                    <!--------->
                     <button class="header__btn-top btn-login">login</button>
                 </div>
                 <div class="header__banner">
