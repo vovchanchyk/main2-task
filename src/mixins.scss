@@ -3,3 +3,24 @@
   font-size: $fs;
   color: $fc;
 }
+
+@mixin btn( $w, $h, $bg, ) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 19px;
+  background-color: $bg;
+  width: $w;
+  height: $h;
+  font-family: $semibold;
+  font-size: $fSmall;
+  color: $white;
+ 
+  
+}
+@mixin flex($fd, $Jc, $ai,){
+  display: flex;
+  flex-direction: $fd;
+  justify-content: $Jc;
+  align-items: $ai;
+}

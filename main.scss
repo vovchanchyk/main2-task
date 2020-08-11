@@ -4,56 +4,58 @@
 @import "./src/mixins.scss";
 @import "./src/varibles.scss";
 
-.wrapper {
-  width: 1490px;
-  height: 2600px;
-  margin: auto; /*в качестве исключения дал */
+nav {
+  li {
+    list-style: none;
+  }
 }
-.header {
-  width: 100%;
-  height: 652px;
-  background-image: url(./img/header/background.png);
+a {
+  @include fonts($regular, $fSmall, $white);
+}
 
+.header {
+  background-image: url(./img/header/background.png);
+  background-position: top center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-width: 1024px;
+  height: auto;
+  margin: auto;
   &__container {
-    display: flex;
-    flex-direction: column;
     width: 100%;
     height: 100%;
-    background-color: #000;
-    opacity: 75%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba($color: #000000, $alpha: 0.3);
   }
 
   &__top {
-    width: 1100px;
+    width: 80%;
+    height: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 23px 0px 0px 220px;
+    margin: 23px auto 0px;
+    
   }
 
-  &__menu {
-    width: 392px;
-    display: flex;
-    justify-content: space-between;
+  &__logo {
+    width: 167px;
+    height: 26px;
   }
 
-  &__menu-item {
-    @include fonts($semibold, $regular, $white);
-    &::after {
-      content: url(./img/header/Arrow.png);
-      padding-left: 10px;
-    }
+ 
+
+  &__submenu {
+    display: none;
+  }
+  &__sub-submenu {
+    display: none;
   }
 
   &__btn-top {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 107px;
-    height: 37px;
-    border-radius: 19px;
-    background-color: $fern;
-    @include fonts($semibold, $fSmall, $white);
+    @include btn(107px, 37px, $fern);
+    flex-shrink: 0;
     &::before {
       content: url(./img/header/Icon_button.png);
       padding-right: 5px;
@@ -62,13 +64,15 @@
   }
 
   &__banner {
-    margin: 195px 0px 0px 240px;
-    width: 1048px;
-    height: 298px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 190px;
   }
 
   &__title {
-    text-align: center;
     @include fonts($light, $biggest, $white);
   }
 
@@ -77,82 +81,44 @@
   }
 
   &__subtitle {
-    margin-top: 15px;
-    text-align: center;
     @include fonts($regular, $fregular, $white);
+    margin-top: 15px;
   }
 
-  &__search {
-    width: 100%;
+  &__form {
     display: flex;
+
+    align-items: flex-start;
     justify-content: space-between;
     margin-top: 95px;
+
+    box-sizing: border-box;
   }
 
   &__btn-banner {
-    margin: 70px auto;
+    margin: 75px auto;
+    @include btn(180px, 37px, $fern);
+    &::before {
+      content: url(./img/header/Icon_button.png);
+      padding-right: 5px;
+      margin-top: 5px;
+    }
   }
 }
-.logo {
-  width: 167px;
-  height: 26px;
-}
 
-.search-form {
-  &__item {
-    width: 289px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #001e2d;
-    position: relative;
-  }
-
-  &__button {
-    background: transparent;
-    padding-left: 15px;
-  }
-
-  &__input {
-    padding-left: 15px;
-    background: transparent;
-    @include fonts($semibold, $fSmall, $white);
-    opacity: 100%;
-  }
-
-  &__arrow {
-    position: absolute;
-    right: 15px;
-  }
-}
-.btn-become {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 180px;
-  height: 37px;
-  border-radius: 19px;
-  padding-bottom: 3px;
-  background-color: $fern;
-  @include fonts($semibold, $fSmall, $white);
-  &::before {
-    content: url(./img/header/Icon_button.png);
-    padding-right: 7px;
-    margin-top: 3px;
-  }
-}
 .points {
+  min-width: 1024px;
   &__container {
-    width: 899px;
-    height: 234px;
+    width: 100%;
+    height: auto;
     display: flex;
-    justify-content: space-between;
-    flex-direction: row;
+    justify-content: center;
     margin: 81px auto 0px;
+    
   }
 
   &__column {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin: 0 5%;
   }
 }
 .points-item {
@@ -162,7 +128,6 @@
   &__img {
     width: 99px;
     height: 99px;
-    margin: auto;
   }
 
   &__title {
@@ -178,25 +143,26 @@
   }
 }
 .quote {
-  width: 100%;
-  height: 269px;
-  background: #fbfbfd;
+  min-width: 1024px;
   &__container {
-    width: 502px;
-    margin: calc(97px + 52px) auto 50px;
+    margin: 7.72% auto 3.3%;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fbfbfd;
   }
 
   &__text {
-    padding-top: 35px;
     @include fonts($regular, $normal, $capeCod);
     font-style: italic;
     text-align: center;
     line-height: 30px;
-    width: 520px;
+    margin-top: 35px;
   }
 
   &__line {
-    text-align: center;
     display: block;
     margin: 28px auto;
   }
@@ -205,19 +171,13 @@
     @include fonts($regular, $fSmall, $capeCod);
     text-transform: uppercase;
     margin-top: 26px;
-    text-align: center;
   }
 
   &__btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 204px;
-    height: 43px;
-    border-radius: 22px;
-    @include fonts($semibold, $normal, $capeCod);
+    @include btn(204px, 43px, transparent);
     border: 1px solid #7e7ab6;
     margin: 26px auto;
+    color: $capeCod;
     &::before {
       content: url(./img/mid/quote/View_eye.png);
       padding-right: 5px;
@@ -225,33 +185,40 @@
     }
   }
 }
+
 .howto {
+  min-width: 1024px;
   width: 100%;
-  height: 500px;
-  padding-top: 79px;
-  &__container {
-    margin: auto;
-    width: 1076px;
-    height: 319px;
-  }
+  height: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: centr;
 
   &__title {
     @include fonts($regular, $biggest, $capeCod);
+    padding: 7%;
     text-align: center;
   }
 
   &__row {
+    margin-bottom: 76px;
     display: flex;
-    justify-content: space-between;
-    margin-top: 76px;
+    justify-content: center;
   }
 
   &__column {
-    width: 188px;
-    margin: auto;
+    max-width: 188px;
+    width: calc(20% - (13.2px * 2));
+    margin: 0 13.2px;
   }
+  
+  
 }
 .howto-item {
+  
+  
   &__avatar {
     margin: auto;
     border: $blue dashed 1px;
@@ -261,6 +228,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+   
   }
 
   &__img {
@@ -269,10 +237,10 @@
   }
 
   &__text {
-    margin-top: 36px;
-    text-align: center;
     @include fonts($regular, $fSmall, $capeCod);
     line-height: 24px;
+    text-align: center;
+    margin-top: 36px;
   }
 
   &__text--blue {
@@ -280,18 +248,19 @@
     color: $blue;
   }
 }
-.partners {
-  width: 100%;
-  height: 213px;
-  background: #fbfbfd;
-  padding-top: 40px;
 
+.partners {
+  min-width: 1024px;
+  background: #fbfbfd;
   &__container {
-    width: 860px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    margin: auto;
+  }
+
+  &__logo {
+    width: 205px;
+    margin: 0px 24.2px;
   }
 
   &__line {
@@ -304,6 +273,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-left: 24px;
   }
 
   &__title {
@@ -318,53 +288,58 @@
   &__text--blue {
     color: $blue;
   }
-}
-.sylvan-logo {
-  width: 205px;
-}
-.kaplan-logo {
-  width: 204px;
-  height: 68px;
-}
-.mathhelp {
-  width: 100%;
+  
 
+
+}
+
+.mathhelp {
+  min-width: 1024px;
   &__container {
-    width: 1200px;
+    width: 100%;
+    height: auto;
     display: flex;
+    justify-content: center;
   }
 
   &__item {
-    margin: 118px 0px 0px 230px;
-    width: 375px;
+    margin: 8% 0px 0px 15%;
+    width: 25.4%;
   }
 
   &__title {
     @include fonts($regular, $biggest, $capeCod);
-    width: 255px;
   }
 
   &__text {
-    width: 379px;
-    height: 120px;
+    width: 100%;
+    height: auto;
     line-height: 30px;
     @include fonts($regular, $normal, $capeCod);
-    margin-top: 49px;
+    margin: 49px 0px;
   }
 
   &__btn {
-    margin-top: 50px;
-    width: 192px;
-    border-radius: 18px;
+    @include btn(192px, 37px, $fern);
+    margin-bottom: 50px;
+    &::before {
+      content: url(./img/header/Icon_button.png);
+      padding-right: 7px;
+      margin-top: 3px;
+    }
   }
 
   &__img {
+    width: 52.01%;
     margin-left: 50px;
-    width: 775px;
-    height: 513px;
+    align-self: flex-end;
   }
+ 
+  
 }
+
 .footer {
+  min-width: 1024px;
   width: 100%;
   height: 70px;
   display: flex;
@@ -380,16 +355,9 @@
     @include fonts($regular, $fSmall, $white);
     margin-right: 225px;
   }
-}
-
-.mobile-menu .hiden {
-  display: none;
-}
-
-.mobile-btn {
-  display: none;
-}
-
+  
+ }
+@import "./src/menu.scss";
+@import "./src/form.scss";
 @import "./src/media.scss";
-
-@import "./src/show-menu.scss";
+@import "./src/popup.scss";

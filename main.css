@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
@@ -36,7 +35,7 @@ body {
   width: 100%;
   font-size: 100%;
   line-height: 1;
-  font-size: 14px;
+  font-size: 18px;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -106,58 +105,62 @@ img {
   font-weight: 700;
   font-style: normal;
 }
-.wrapper {
-  width: 1490px;
-  height: 2600px;
-  margin: auto;
-  /*в качестве исключения дал */
+nav li {
+  list-style: none;
+}
+
+a {
+  font-family: "Segoe UI regular";
+  font-size: 0.778em;
+  color: #fff;
 }
 
 .header {
-  width: 100%;
-  height: 652px;
   background-image: url(./img/header/background.png);
+  background-position: top center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-width: 1024px;
+  height: auto;
+  margin: auto;
 }
 .header__container {
-  display: flex;
-  flex-direction: column;
   width: 100%;
   height: 100%;
-  background-color: #000;
-  opacity: 75%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 .header__top {
-  width: 1100px;
+  width: 80%;
+  height: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 23px 0px 0px 220px;
+  margin: 23px auto 0px;
 }
-.header__menu {
-  width: 392px;
-  display: flex;
-  justify-content: space-between;
+.header__logo {
+  width: 167px;
+  height: 26px;
 }
-.header__menu-item {
-  font-family: "Segoe UI semibold";
-  font-size: "Segoe UI regular";
-  color: #fff;
+.header__submenu {
+  display: none;
 }
-.header__menu-item::after {
-  content: url(./img/header/Arrow.png);
-  padding-left: 10px;
+.header__sub-submenu {
+  display: none;
 }
 .header__btn-top {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 107px;
-  height: 37px;
   border-radius: 19px;
   background-color: #5cb85c;
+  width: 107px;
+  height: 37px;
   font-family: "Segoe UI semibold";
-  font-size: 14px;
+  font-size: 0.778em;
   color: #fff;
+  flex-shrink: 0;
 }
 .header__btn-top::before {
   content: url(./img/header/Icon_button.png);
@@ -165,95 +168,65 @@ img {
   margin-top: 5px;
 }
 .header__banner {
-  margin: 195px 0px 0px 240px;
-  width: 1048px;
-  height: 298px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 190px;
 }
 .header__title {
-  text-align: center;
   font-family: "Segoe UI light";
-  font-size: 36px;
+  font-size: 2em;
   color: #fff;
 }
 .header__title--bold {
   font-family: "Segoe UI semibold";
 }
 .header__subtitle {
-  margin-top: 15px;
-  text-align: center;
   font-family: "Segoe UI regular";
-  font-size: 18px;
+  font-size: 1em;
   color: #fff;
+  margin-top: 15px;
 }
-.header__search {
-  width: 100%;
+.header__form {
   display: flex;
+  align-items: flex-start;
   justify-content: space-between;
   margin-top: 95px;
+  box-sizing: border-box;
 }
 .header__btn-banner {
-  margin: 70px auto;
-}
-
-.logo {
-  width: 167px;
-  height: 26px;
-}
-
-.search-form__item {
-  width: 289px;
-  padding-bottom: 10px;
-  border-bottom: 2px solid #001e2d;
-  position: relative;
-}
-.search-form__button {
-  background: transparent;
-  padding-left: 15px;
-}
-.search-form__input {
-  padding-left: 15px;
-  background: transparent;
-  font-family: "Segoe UI semibold";
-  font-size: 14px;
-  color: #fff;
-  opacity: 100%;
-}
-.search-form__arrow {
-  position: absolute;
-  right: 15px;
-}
-
-.btn-become {
+  margin: 75px auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 19px;
+  background-color: #5cb85c;
   width: 180px;
   height: 37px;
-  border-radius: 19px;
-  padding-bottom: 3px;
-  background-color: #5cb85c;
   font-family: "Segoe UI semibold";
-  font-size: 14px;
+  font-size: 0.778em;
   color: #fff;
 }
-.btn-become::before {
+.header__btn-banner::before {
   content: url(./img/header/Icon_button.png);
-  padding-right: 7px;
-  margin-top: 3px;
+  padding-right: 5px;
+  margin-top: 5px;
 }
 
+.points {
+  min-width: 1024px;
+}
 .points__container {
-  width: 899px;
-  height: 234px;
+  width: 100%;
+  height: auto;
   display: flex;
-  justify-content: space-between;
-  flex-direction: row;
+  justify-content: center;
   margin: 81px auto 0px;
 }
 .points__column {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin: 0 5%;
 }
 
 .points-item {
@@ -263,67 +236,68 @@ img {
 .points-item__img {
   width: 99px;
   height: 99px;
-  margin: auto;
 }
 .points-item__title {
   font-family: "Segoe UI bold";
-  font-size: 28px;
+  font-size: 1.55em;
   color: #817bba;
   margin-top: 37px;
 }
 .points-item__text {
   margin-top: 25px;
   font-family: "Segoe UI regular";
-  font-size: 14px;
+  font-size: 0.778em;
   color: #424242;
   line-height: 24px;
   text-align: center;
 }
 
 .quote {
-  width: 100%;
-  height: 269px;
-  background: #fbfbfd;
+  min-width: 1024px;
 }
 .quote__container {
-  width: 502px;
-  margin: calc(97px + 52px) auto 50px;
+  margin: 7.72% auto 3.3%;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fbfbfd;
 }
 .quote__text {
-  padding-top: 35px;
   font-family: "Segoe UI regular";
-  font-size: 16px;
+  font-size: 0.88858em;
   color: #424242;
   font-style: italic;
   text-align: center;
   line-height: 30px;
-  width: 520px;
+  margin-top: 35px;
 }
 .quote__line {
-  text-align: center;
   display: block;
   margin: 28px auto;
 }
 .quote__title {
   font-family: "Segoe UI regular";
-  font-size: 14px;
+  font-size: 0.778em;
   color: #424242;
   text-transform: uppercase;
   margin-top: 26px;
-  text-align: center;
 }
 .quote__btn {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 19px;
+  background-color: transparent;
   width: 204px;
   height: 43px;
-  border-radius: 22px;
   font-family: "Segoe UI semibold";
-  font-size: 16px;
-  color: #424242;
+  font-size: 0.778em;
+  color: #fff;
   border: 1px solid #7e7ab6;
   margin: 26px auto;
+  color: #424242;
 }
 .quote__btn::before {
   content: url(./img/mid/quote/View_eye.png);
@@ -332,29 +306,30 @@ img {
 }
 
 .howto {
+  min-width: 1024px;
   width: 100%;
-  height: 500px;
-  padding-top: 79px;
-}
-.howto__container {
-  margin: auto;
-  width: 1076px;
-  height: 319px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: centr;
 }
 .howto__title {
   font-family: "Segoe UI regular";
-  font-size: 36px;
+  font-size: 2em;
   color: #424242;
+  padding: 7%;
   text-align: center;
 }
 .howto__row {
+  margin-bottom: 76px;
   display: flex;
-  justify-content: space-between;
-  margin-top: 76px;
+  justify-content: center;
 }
 .howto__column {
-  width: 188px;
-  margin: auto;
+  max-width: 188px;
+  width: calc(20% - (13.2px * 2));
+  margin: 0 13.2px;
 }
 
 .howto-item__avatar {
@@ -372,12 +347,12 @@ img {
   height: 48px;
 }
 .howto-item__text {
-  margin-top: 36px;
-  text-align: center;
   font-family: "Segoe UI regular";
-  font-size: 14px;
+  font-size: 0.778em;
   color: #424242;
   line-height: 24px;
+  text-align: center;
+  margin-top: 36px;
 }
 .howto-item__text--blue {
   font-family: "Segoe UI bold";
@@ -385,17 +360,17 @@ img {
 }
 
 .partners {
-  width: 100%;
-  height: 213px;
+  min-width: 1024px;
   background: #fbfbfd;
-  padding-top: 40px;
 }
 .partners__container {
-  width: 860px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  margin: auto;
+}
+.partners__logo {
+  width: 205px;
+  margin: 0px 24.2px;
 }
 .partners__line {
   display: block;
@@ -406,15 +381,16 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-left: 24px;
 }
 .partners__title {
   font-family: "Segoe UI bold";
-  font-size: 28px;
+  font-size: 1.55em;
   color: #817bba;
 }
 .partners__text {
   font-family: "Segoe UI regular";
-  font-size: 14px;
+  font-size: 0.778em;
   color: #424242;
   line-height: 24px;
 }
@@ -422,53 +398,59 @@ img {
   color: #817bba;
 }
 
-.sylvan-logo {
-  width: 205px;
-}
-
-.kaplan-logo {
-  width: 204px;
-  height: 68px;
-}
-
 .mathhelp {
-  width: 100%;
+  min-width: 1024px;
 }
 .mathhelp__container {
-  width: 1200px;
+  width: 100%;
+  height: auto;
   display: flex;
+  justify-content: center;
 }
 .mathhelp__item {
-  margin: 118px 0px 0px 230px;
-  width: 375px;
+  margin: 8% 0px 0px 15%;
+  width: 25.4%;
 }
 .mathhelp__title {
   font-family: "Segoe UI regular";
-  font-size: 36px;
+  font-size: 2em;
   color: #424242;
-  width: 255px;
 }
 .mathhelp__text {
-  width: 379px;
-  height: 120px;
+  width: 100%;
+  height: auto;
   line-height: 30px;
   font-family: "Segoe UI regular";
-  font-size: 16px;
+  font-size: 0.88858em;
   color: #424242;
-  margin-top: 49px;
+  margin: 49px 0px;
 }
 .mathhelp__btn {
-  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 19px;
+  background-color: #5cb85c;
   width: 192px;
-  border-radius: 18px;
+  height: 37px;
+  font-family: "Segoe UI semibold";
+  font-size: 0.778em;
+  color: #fff;
+  margin-bottom: 50px;
+}
+.mathhelp__btn::before {
+  content: url(./img/header/Icon_button.png);
+  padding-right: 7px;
+  margin-top: 3px;
 }
 .mathhelp__img {
+  width: 52.01%;
   margin-left: 50px;
-  width: 775px;
-  height: 513px;
+  align-self: flex-end;
 }
 
 .footer {
+  min-width: 1024px;
   width: 100%;
   height: 70px;
   display: flex;
@@ -481,234 +463,485 @@ img {
 }
 .footer__copyright {
   font-family: "Segoe UI regular";
-  font-size: 14px;
+  font-size: 0.778em;
   color: #fff;
   margin-right: 225px;
 }
 
-.mobile-menu .hiden {
-  display: none;
+.mouse .header__menu {
+  width: 392px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mouse .header__menu-list {
+  flex: 0 0 33%;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  height: auto;
+  padding: 5px;
+}
+.mouse .header__menu-list:hover {
+  background-color: rgba(61, 61, 61, 0.5);
+}
+.mouse .header__menu-list:hover .header__submenu {
+  display: block;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  left: 0;
+  background-color: rgba(61, 61, 61, 0.5);
+}
+.mouse .header__submenu-list {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 5px;
+}
+.mouse .header__submenu-list:hover {
+  background-color: rgba(61, 61, 61, 0.7);
+}
+.mouse .header__submenu-list:hover .header__sub-submenu {
+  width: 100%;
+  display: block;
+  position: absolute;
+  top: 0%;
+  left: 100%;
+  background-color: rgba(61, 61, 61, 0.5);
+}
+.mouse .header__sub-submenu-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  width: 100%;
+  position: relative;
+}
+.mouse .header__sub-submenu-list:hover {
+  background-color: rgba(61, 61, 61, 0.7);
 }
 
-.mobile-btn {
-  display: none;
+.touch a {
+  display: inline-block;
+  margin: 5px;
 }
-
-@font-face {
-  font-family: "Segoe UI light";
-  src: url("./fonts/SegoeUI-Light.eot");
-  src: local("Segoe UI Light"), local("SegoeUI-Light"), url("SegoeUI-Light.eot?#iefix") format("embedded-opentype"), url("SegoeUI-Light.woff") format("woff"), url("SegoeUI-Light.ttf") format("truetype");
-  font-weight: 300;
-  font-style: normal;
+.touch .header__top {
+  position: relative;
+  width: 90%;
 }
-@font-face {
-  font-family: "Segoe UI regular";
-  src: url("./fonts/SegoeUI.eot");
-  src: local("Segoe UI"), local("SegoeUI"), url("SegoeUI.eot?#iefix") format("embedded-opentype"), url("SegoeUI.woff") format("woff"), url("SegoeUI.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
+.touch .header__menu-block {
+  position: absolute;
+  order: 1;
+  top: 100%;
+  height: auto;
+  width: 70%;
 }
-@font-face {
-  font-family: "Segoe UI semibold";
-  src: url("./fonts/SegoeUI-SemiBold.eot");
-  src: local("Segoe UI Semibold"), local("SegoeUI-SemiBold"), url("SegoeUI-SemiBold.eot?#iefix") format("embedded-opentype"), url("SegoeUI-SemiBold.woff") format("woff"), url("SegoeUI-SemiBold.ttf") format("truetype");
-  font-weight: 600;
-  font-style: normal;
+.touch .header__menu {
+  width: 100%;
+  display: block;
+  top: 0px;
 }
-@font-face {
-  font-family: "Segoe UI bold";
-  src: url("./fonts/SegoeUI-Bold.eot");
-  src: local("Segoe UI Bold"), local("SegoeUI-Bold"), url("SegoeUI-Bold.eot?#iefix") format("embedded-opentype"), url("SegoeUI-Bold.woff") format("woff"), url("SegoeUI-Bold.ttf") format("truetype");
-  font-weight: 700;
-  font-style: normal;
+.touch .header__menu-list {
+  margin: 0 5px;
+  width: 30%;
+  display: inline-block;
+  position: relative;
+  vertical-align: text-top;
+  top: 0;
+  background-color: rgba(61, 61, 61, 0.5);
 }
-@media screen and (max-width: 370px) {
-  .wrapper {
-    width: 370px;
+@media screen and (max-width: 767px) {
+  .touch .header__menu-list {
+    margin: 0;
+    width: 100%;
   }
+  .touch .header__menu-list a {
+    margin: 10px;
+  }
+}
+.touch .header .open-submenu {
+  display: block;
+  position: relative;
+  top: 100%;
+  width: 100%;
+  padding: 5px 0 0 0;
+}
+@media screen and (max-width: 767px) {
+  .touch .header .open-submenu {
+    padding: 0;
+  }
+}
+.touch .header__submenu-list {
+  position: relative;
+  display: block;
+  width: 100%;
+  background-color: rgba(61, 61, 61, 0.6);
+}
+.touch .header__sub-submenu-list {
+  width: 100%;
+  padding: 5px 0 0 0;
+  position: relative;
+  background-color: rgba(61, 61, 61, 0.9);
+}
+@media screen and (max-width: 767px) {
+  .touch .header__sub-submenu-list {
+    padding: 0;
+  }
+}
+.touch .header .arrow {
+  position: absolute;
+  top: 8px;
+  right: 5px;
+}
+@media screen and (max-width: 767px) {
+  .touch .header .arrow {
+    top: 11px;
+  }
+}
+.touch .header .arrow-rotate {
+  transform: rotate(90deg);
+}
 
-  .header {
-    width: 370px;
+.form {
+  margin-top: 95px;
+  display: flex;
+  height: 25px;
+}
+.select {
+  width: 190px;
+  margin: 0 5px;
+  padding-bottom: 5px;
+  height: 100%;
+  border-bottom: solid white;
+  position: relative;
+}
+.select__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5px;
+  height: 100%;
+}
+.select__val {
+  display: block;
+  font-family: "Segoe UI regular";
+  font-size: 0.778em;
+  color: #fff;
+}
+.select__body {
+  display: none;
+}
+.select__item {
+  padding: 0 5px;
+  height: 25px;
+  background-color: rgba(61, 61, 61, 0.8);
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.select__item:hover {
+  background-color: rgba(102, 102, 102, 0.8);
+}
+
+.is-active {
+  border: none;
+  background-color: rgba(61, 61, 61, 0.8);
+}
+.is-active .select__body {
+  width: 100%;
+  top: 100%;
+  position: absolute;
+  display: block;
+  font-family: "Segoe UI regular";
+  font-size: 0.778em;
+  color: #fff;
+}
+
+.search {
+  display: flex;
+  margin: 0 5px;
+  position: relative;
+}
+.search__head {
+  display: flex;
+  align-items: center;
+  border-bottom: solid white;
+  padding: 0 5px;
+  height: auto;
+}
+.search__val {
+  background: transparent;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI regular";
+  font-size: 0.778em;
+  color: #fff;
+}
+.search__body {
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  display: block;
+  font-family: "Segoe UI regular";
+  font-size: 0.778em;
+  color: #fff;
+}
+.search__item {
+  display: none;
+  padding: 0 21px;
+  height: 25px;
+  background-color: rgba(61, 61, 61, 0.8);
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.search__item:hover {
+  background-color: rgba(102, 102, 102, 0.8);
+}
+
+.hidden {
+  display: none;
+}
+
+.is-active {
+  background-color: rgba(61, 61, 61, 0.8);
+}
+.is-active .search__head {
+  border: none;
+}
+
+@media screen and (min-width: 767px) and (max-width: 1024px) {
+  .touch .header {
+    min-width: 767px;
+  }
+  .touch .points {
+    min-width: 767px;
+  }
+  .touch .quote {
+    min-width: 767px;
+  }
+  .touch .howto {
+    min-width: 767px;
+  }
+  .touch .howto__column {
+    margin: 0 8px;
+  }
+  .touch .howto-item__avatar {
+    width: 125px;
+    height: 125px;
+  }
+  .touch .partners {
+    min-width: 767px;
+  }
+  .touch .mathhelp {
+    min-width: 767px;
+  }
+  .touch .mathhelp__container {
+    flex-direction: column;
+  }
+  .touch .mathhelp__item {
+    width: 90%;
+    align-self: center;
+    margin: 8% auto 0;
+  }
+  .touch .mathhelp__btn {
+    margin-bottom: 0px;
+  }
+  .touch .mathhelp__img {
+    width: 80%;
+    align-self: flex-end;
+  }
+  .touch .footer {
+    min-width: 767px;
+  }
+  .touch .footer__logo {
+    margin-left: 100px;
+  }
+  .touch .footer__copyright {
+    margin-right: 100px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .touch .header {
+    min-width: 320px;
+    height: 100vh;
     background-size: cover;
   }
-  .header__container {
-    width: 370px;
-    opacity: none;
-  }
-  .header__top {
-    width: 90%;
-    height: 560px;
-    flex-direction: column;
-    justify-content: space-between;
-    margin: 30px auto;
-  }
-  .header__logo {
-    width: 60%;
-  }
-  .header__menu {
+  .touch .header__logo {
     display: none;
   }
-  .header__banner {
+  .touch .header__menu-block {
     display: none;
   }
-
-  .logo {
-    width: 60%;
-  }
-
-  .mobile-btn {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: transparent;
-    width: 35px;
-    height: 35px;
+  .touch .header__menu-block--open {
+    display: block;
     position: fixed;
-    z-index: 3;
-    top: 25px;
-    right: 40px;
+    z-index: 2;
+    order: 1;
+    top: 0%;
+    left: 2.5%;
+    height: 100vh;
+    width: 95%;
+    background-color: rgba(61, 61, 61, 0.8);
   }
-  .mobile-btn__img {
-    display: block;
-    width: 20px;
-    height: 3px;
-    background-color: #fff;
-    visibility: hidden;
-  }
-  .mobile-btn__img::before, .mobile-btn__img::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 3px;
-    background-color: #fff;
-    visibility: visible;
+  .touch .header__menu {
+    top: 60px;
     position: absolute;
   }
-  .mobile-btn__img::before {
-    transform: rotate(45deg);
-    top: 8;
-    left: 0;
+  .touch .header__menu-list {
+    background-color: transparent;
   }
-  .mobile-btn__img::after {
-    transform: rotate(-45deg);
-    bottom: 8;
-    left: 0;
+  .touch .header__title {
+    text-align: center;
+    font-size: 1.5em;
   }
-  .mobile-btn .close {
+  .touch .header__btn-banner {
+    display: none;
+  }
+  .touch .header .select {
+    display: none;
+  }
+  .touch .burger__btn {
+    position: fixed;
+    z-index: 3;
+    width: 35px;
+    height: 35px;
+    left: 20px;
+    top: 20px;
+    background: transparent;
+  }
+  .touch .burger__img {
     display: block;
-    width: 80%;
-    height: 3px;
-    background-color: #fff;
-    visibility: visible;
-    border-bottom: solid 0.5px black;
+    height: 2.5px;
+    width: 100%;
+    background-color: #3d3d3d;
+    border: 0.3px solid white;
   }
-  .mobile-btn .close::before, .mobile-btn .close::after {
+  .touch .burger__img::before, .touch .burger__img::after {
     content: "";
+    position: absolute;
+    left: 0;
     display: block;
-    width: 80%;
-    height: 3px;
-    background-color: #fff;
-    margin-left: 4px;
-    border-bottom: solid 0.5px black;
-  }
-  .mobile-btn .close::before {
+    height: 2.5px;
+    width: 100%;
+    background-color: #3d3d3d;
+    border: 0.3px solid white;
+    position: absolute;
     transform: translateY(-8px);
   }
-  .mobile-btn .close::after {
-    transform: translateY(8px);
+  .touch .burger__img::after {
+    transform: translateY(7px);
+  }
+  .touch .burger .close {
+    visibility: hidden;
+  }
+  .touch .burger .close::before, .touch .burger .close::after {
+    visibility: visible;
+    transform: rotate(45deg);
+    bottom: 9;
+  }
+  .touch .burger .close::after {
+    transform: rotate(-45deg);
+    bottom: 9;
   }
 
   .points {
-    width: 370px;
+    min-width: 320px;
   }
   .points__container {
-    width: 100%;
-    height: auto;
     flex-direction: column;
+    align-items: center;
+  }
+
+  .points-item {
+    margin: 5px 0;
+  }
+  .points-item__title {
+    margin-top: 20px;
   }
 
   .quote {
-    width: 370px;
-  }
-  .quote__container {
-    width: 100%;
-    text-align: center;
-    margin: 40px auto;
-  }
-  .quote__text {
-    width: 97%;
+    min-width: 320px;
+    width: 95%;
   }
 
   .howto {
-    width: 100%;
-    height: auto;
+    min-width: 320px;
   }
-  .howto__container {
-    width: 100%;
-    height: auto;
+  .howto__title {
+    font-size: 1.5em;
   }
   .howto__row {
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
   }
   .howto__column {
-    padding-top: 20px;
+    width: auto;
+  }
+
+  .howto-item__text {
+    margin: 18px 0;
   }
 
   .partners {
-    width: 370px;
-    height: auto;
+    min-width: 320px;
   }
   .partners__container {
-    width: 100%;
     flex-direction: column;
   }
+  .partners__logo {
+    margin: 20px auto;
+  }
   .partners__line {
-    display: none;
+    transform: rotate(90deg);
   }
   .partners__item {
-    text-align: center;
-    margin-top: 40px;
+    margin: auto;
   }
-
-  .sylvan-logo {
-    margin-top: 40px;
+  .partners__title {
+    text-align: center;
+    margin: 0 auto;
+  }
+  .partners__text {
+    text-align: center;
   }
 
   .kaplan-logo {
-    margin-top: 40px;
+    margin: 0 auto;
   }
 
   .mathhelp {
-    width: 370px;
+    min-width: 320px;
   }
   .mathhelp__container {
-    width: 100%;
     flex-direction: column;
-    margin: 60px auto 0px;
   }
   .mathhelp__item {
-    margin: 40px auto;
-  }
-  .mathhelp__text {
-    padding-top: 10px;
-    text-align: center;
+    width: 90%;
+    margin: 8% auto;
   }
   .mathhelp__title {
-    margin: auto;
+    text-align: center;
+  }
+  .mathhelp__text {
+    text-align: center;
   }
   .mathhelp__btn {
-    margin: 30px auto;
+    margin: auto;
   }
   .mathhelp__img {
-    margin: auto;
-    width: 340px;
-    height: 260px;
+    width: 90%;
   }
 
   .footer {
+    min-width: 320px;
     flex-direction: column;
-    width: 100%;
   }
   .footer__logo {
     margin: auto;
@@ -717,74 +950,98 @@ img {
     margin: auto;
   }
 }
-.mobile-menu {
-  width: 90%;
-  height: 95%;
+.popup {
   position: fixed;
-  z-index: 1;
-  top: 10px;
-  background-color: #3f4350;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  border: solid wheat 1px;
-}
-.mobile-menu__list {
-  font-family: "Segoe UI semibold";
-  font-size: 18px;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-.mobile-menu__item {
-  margin-top: 20px;
-  font-family: "Segoe UI semibold";
-  font-size: 36px;
-  color: #fff;
-}
-.mobile-menu__form {
-  border-bottom: solid wheat 1px;
-  padding-bottom: 5px;
-  display: flex;
+  justify-content: center;
   align-items: center;
 }
-.mobile-menu__btn {
-  background: transparent;
+.popup__body {
+  max-width: 400px;
+  height: 250px;
+  min-width: 310px;
+  border-radius: 20%;
+}
+.popup__head {
+  height: 28px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  background-color: #666;
+}
+.popup__close {
+  display: block;
+  height: 1.5px;
+  width: 25px;
+  background-color: #ffff;
+  position: relative;
+  visibility: hidden;
+}
+.popup__close::before, .popup__close::after {
+  content: "";
+  visibility: visible;
+  position: absolute;
+  display: block;
+  height: 1.5px;
+  width: 25px;
+  background-color: #ffff;
+  transform: rotate(45deg);
+}
+.popup__close::after {
+  transform: rotate(-45deg);
+}
+.popup__form {
+  height: calc(100% - 20px);
+  background-color: #666;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.popup__title {
+  font-family: "Segoe UI regular";
+  font-size: 1.5em;
+  color: white;
+}
+.popup__inputs {
+  height: auto;
+  width: 65%;
+}
+.popup__input {
+  display: block;
+  width: 100%;
+  margin: 20px auto;
+  height: 35px;
+  border-radius: 10px;
+}
+.popup__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 19px;
+  background-color: #5cb85c;
+  width: 107px;
+  height: 37px;
+  font-family: "Segoe UI semibold";
+  font-size: 0.778em;
   color: #fff;
-  width: 20px;
-  height: 20px;
+  flex-shrink: 0;
 }
-.mobile-menu__input {
-  background: transparent;
-  padding-left: 10px;
-}
-.mobile-menu__input::-webkit-input-placeholder {
-  font-size: 16px;
-  font-family: "Segoe UI";
-}
-.mobile-menu__input::-moz-placeholder {
-  font-size: 16px;
-}
-.mobile-menu__input:-ms-input-placeholder {
-  font-size: 16px;
-}
-.mobile-menu__input:-moz-placeholder {
-  font-size: 16px;
-}
-.mobile-menu__arrow {
-  padding-right: 15px;
+.popup__button::before {
+  content: url(./img/header/Icon_button.png);
+  padding-right: 5px;
+  margin-top: 5px;
 }
 
-.hidden {
+.close {
   display: none;
-}
-
-@media screen and (min-width: 370px) {
-  .mobile-menu {
-    display: none;
-  }
 }
 
 /*# sourceMappingURL=main.css.map */
