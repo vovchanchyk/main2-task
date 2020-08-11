@@ -30,14 +30,20 @@
 
         
     }
-
+    &__btn-close{
+        height: 100%;
+        background: transparent;
+        width: 25px;
+        height: 25px;
+        
+    }
     &__close {
         display: block;
         height: 1.5px;
-        width: 25px;
+        width: 100%;
         background-color: #ffff;
         position: relative;
-        visibility: hidden;
+        
         
         &::before,
         &::after {
@@ -56,6 +62,7 @@
         &::after{
             transform: rotate(-45deg);
         }
+        visibility: hidden;
 
     }
 

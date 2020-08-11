@@ -89,7 +89,7 @@ function closePopup() {
     $('.popup').addClass('close');
     
 }
-$('.popup__close').on('click', closePopup);
+// $('.popup__btn-close').on('click', closePopup);
 
 $('.popup__button').on('click',function () {
  let emailInput = $('.popup__input[type = email]');
