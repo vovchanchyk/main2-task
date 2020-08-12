@@ -71,6 +71,12 @@
   a {
     display: inline-block;
     margin:  5px;
+    @media screen and (max-width:767px) {
+      margin: 20px ;
+      font-size: 1em;
+      position: relative;
+      
+    }
   }
 
   .header {
@@ -93,6 +99,7 @@
       width: 100%;
       display: block;
       top: 0px;  
+      
     }
     &__menu-list {
       margin: 0 5px;
@@ -105,9 +112,8 @@
       @media screen and(max-width:767px) {
         margin: 0;
         width: 100%;
-        a{
-          margin: 10px ;
-        }
+        border-bottom: white 0.1px solid;
+        
         
       }
     }
@@ -118,6 +124,7 @@
       width: 100%;
       padding: 5px 0 0 0;
       @media screen and(max-width:767px) {
+        border-top: solid white 0.1px;
         padding: 0;
         
       }
@@ -128,15 +135,21 @@
       display: block;
       width: 100%;
       // padding: 5px 0;
-      background-color: rgba($color: #3d3d3d, $alpha: 0.6);
+      background-color: rgba($color: #656, $alpha: 0.6);
+      @media screen and(max-width:767px) {
+        border-bottom: white 0.1px solid;
+        padding: 0;
+        
+      }
     }
 
     &__sub-submenu-list {
       width: 100%;
       padding: 5px 0  0 0;
       position: relative;
-      background-color: rgba($color: #3d3d3d, $alpha: 0.9);
+      background-color: rgba($color: #888, $alpha: 0.9);
       @media screen and(max-width:767px) {
+        border-bottom: white 0.1px solid;
         padding: 0;
         
       }
@@ -148,8 +161,8 @@
       top: 8px;
       right: 5px;
       @media screen and(max-width:767px) {
-        top: 11px;
-        right: 10px;
+        top: 20px;
+        right: 20px;
         
       }
     }
