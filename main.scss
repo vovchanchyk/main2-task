@@ -39,12 +39,46 @@ a {
     
   }
 
+  &__menu{
+    width: 392px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__menu-list{
+    display: block;
+    position: relative;
+    width: 33%;
+   
+  }
+  &__submenu-list{
+    position: relative;
+   
+      
+  }
+  &__sub-submenu-list{
+    &:hover{
+      background-color: rgba($color: #3d3d3d, $alpha: 0.7);
+    }
+
+  }
+   .arrow{
+    position: absolute;
+    top: 7px;
+    right: 5px;
+    
+   }
+  
+
   &__logo {
     width: 167px;
     height: 26px;
   }
 
  
+
+
+
 
   &__submenu {
     display: none;

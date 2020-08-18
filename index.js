@@ -1,26 +1,26 @@
 
-let isMobile = {
-	Android: function() {return navigator.userAgent.match(/Android/i);},
-	BlackBerry: function() {return navigator.userAgent.match(/BlackBerry/i);},
-	iOS: function() {return navigator.userAgent.match(/iPhone|iPad|iPod/i);},
-	Opera: function() {return navigator.userAgent.match(/Opera Mini/i);},
-	Windows: function() {return navigator.userAgent.match(/IEMobile/i);},
-	any: function() {return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());}
-};
-let body = $('body');
-if(isMobile.any()){
-    body.addClass('touch');
-    let arrowMenu = $('.arrow');
-   arrowMenu.on('click', function () {
-       $(this).toggleClass('arrow-rotate')
-       $(this).next().toggleClass('open-submenu')
+ let isMobile = {
+ 	Android: function() {return navigator.userAgent.match(/Android/i);},
+ 	BlackBerry: function() {return navigator.userAgent.match(/BlackBerry/i);},
+ 	iOS: function() {return navigator.userAgent.match(/iPhone|iPad|iPod/i);},
+ 	Opera: function() {return navigator.userAgent.match(/Opera Mini/i);},
+ 	Windows: function() {return navigator.userAgent.match(/IEMobile/i);},
+ 	any: function() {return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());}
+ };
+ let body = $('body');
+ if(isMobile.any()){
+     body.addClass('touch');
+     let arrowMenu = $('.arrow');
+    arrowMenu.on('click', function () {
+        $(this).toggleClass('arrow-rotate')
+        $(this).next().toggleClass('open-submenu')
        
-   })
+    })
  
-}else{
-    body.addClass('mouse')
+ }else{
+     body.addClass('mouse')
     
-}
+ }
 
 let selected = function () {
     let selectHead = $(".select__head");

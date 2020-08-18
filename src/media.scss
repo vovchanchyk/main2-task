@@ -1,488 +1,344 @@
-@media screen and(min-width:767px) and(max-width:1024px){
-  .touch {
-    .header {
-      min-width: 767px;
-      &__container {
-      }
-
-      &__top {
-      }
-
-      &__logo {
-      }
-
-      &__menu-block {
-      }
-
-      &__menu-block--open {
-      }
-
-      &__menu {
-      }
-
-      &__menu-list {
-      }
-
-      &__menu-link {
-      }
-
-      &__menu-arrow {
-      }
-
-      &__submenu {
-      }
-
-      &__submenu-list {
-      }
-
-      &__submenu-link {
-      }
-
-      &__submenu-arrow {
-      }
-
-      &__sub-submenu {
-      }
-
-      &__sub-submenu-list {
-      }
-
-      &__sub-submenu-link {
-      }
-
-      &__btn-top {
-      }
-
-      &__banner {
-      }
-
-      &__title {
-      }
-
-      &__title--bold {
-      }
-
-      &__subtitle {
-      }
-
-      &__btn-banner {
-      }
+@media screen and(min-width:767px) and(max-width:1024px) {
+  a {
+    display: inline-block;
+    margin: 5px;
+  }
+  .header {
+    min-width: 767px;
+    &__top {
+      position: relative;
+      width: 90%;
     }
-    .logo {
+
+    &__menu-block {
+      position: absolute;
+      order: 1;
+      top: 100%;
+      height: auto;
+      width: 70%;
     }
-    .arrow {
+
+    &__menu {
+      width: 100%;
+      display: block;
+      top: 0px;
     }
-    .burger {
-      &__btn {
-      }
 
-      &__img {
-      }
+    &__menu-list {
+      margin: 0 5px;
+      width: 30%;
+      display: inline-block;
+      position: relative;
+      vertical-align: text-top;
+      top: 0;
+      background-color: rgba($color: #3d3d3d, $alpha: 0.5);
     }
-    .btn-login {
+
+    &__submenu-list {
+      position: relative;
+      display: block;
+      width: 100%;
+      background-color: rgba($color: #656, $alpha: 0.6);
     }
-    .form {
+  }
+
+  .arrow {
+    position: absolute;
+    top: 8px;
+    right: 5px;
+  }
+
+  .points {
+    min-width: 767px;
+  }
+
+  .quote {
+    min-width: 767px;
+  }
+  .howto {
+    min-width: 767px;
+  
+    &__column {
+      margin: 0 8px;
     }
-    .select {
-      &__head {
-      }
-
-      &__val {
-      }
-
-      &__btn {
-      }
-
-      &__body {
-      }
-
-      &__item {
-      }
+  }
+  .howto-item {
+    &__avatar {
+      width: 125px;
+      height: 125px;
     }
-    .search {
-      &__head {
-      }
-
-      &__btn {
-      }
-
-      &__val {
-      }
-
-      &__arrow {
-      }
-
-      &__body {
-      }
-
-      &__item {
-      }
+  }
+  .partners {
+    min-width: 767px;
+  }
+  .mathhelp {
+    min-width: 767px;
+    &__container {
+      flex-direction: column;
     }
-    .hidden {
+
+    &__item {
+      width: 90%;
+      align-self: center;
+      margin: 8% auto 0;
     }
-    .btn-become {
+
+    &__btn {
+      margin-bottom: 0px;
     }
-    .points {
-      min-width: 767px;
 
-      &__container {
-      }
-
-      &__column {
-      }
+    &__img {
+      width: 80%;
+      align-self: flex-end;
     }
-    .points-item {
-      &__img {
-      }
-
-      &__title {
-      }
-
-      &__text {
-      }
+  }
+  .footer {
+    min-width: 767px;
+    &__logo {
+      margin-left: 100px;
     }
-    .quote {
-      min-width: 767px;
-      &__container {
-      }
 
-      &__text {
-      }
-
-      &__line {
-      }
-
-      &__title {
-      }
-
-      &__btn {
-      }
-    }
-    .howto {
-      min-width: 767px;
-      &__container {
-      }
-
-      &__title {
-      }
-
-      &__row {
-      }
-
-      &__column {
-        margin: 0 8px;
-      }
-    }
-    .howto-item {
-      &__avatar {
-        width: 125px;
-        height: 125px;
-      }
-
-      &__img {
-      }
-
-      &__text {
-      }
-
-      &__text--blue {
-      }
-    }
-    .partners {
-      min-width: 767px;
-      &__container {
-      }
-
-      &__logo {
-      }
-
-      &__line {
-      }
-
-      &__item {
-      }
-
-      &__title {
-      }
-
-      &__text {
-      }
-
-      &__text--blue {
-      }
-    }
-    .sylvan-logo {
-    }
-    .kaplan-logo {
-    }
-    .mathhelp {
-      min-width: 767px;
-      &__container {
-        flex-direction: column;
-      }
-
-      &__item {
-        width: 90%;
-        align-self: center;
-        margin: 8% auto 0;
-      }
-
-      &__title {
-      }
-
-      &__text {
-      }
-
-      &__btn {
-        margin-bottom: 0px;
-      }
-
-      &__img {
-        width: 80%;
-        align-self: flex-end;
-      }
-    }
-    .footer {
-      min-width: 767px;
-      &__logo {
-        margin-left: 100px;
-      }
-
-      &__copyright {
-        margin-right: 100px;
-      }
+    &__copyright {
+      margin-right: 100px;
     }
   }
 }
-@media screen and(max-width:767px) {
-  .touch {
-    
-    .header {
-      min-width: 320px;
-      height: 100vh;
-      background-size: cover;
-      &__container {
-      }
+@media screen and(max-width:766px) {
+  .header {
+    min-width: 320px;
+    height: 100vh;
+    background-size: cover;
 
-      &__top {
-      }
 
-      &__logo {
-        display: none;
-      }
-
-      &__menu-block {
-         display: none;
-      }
-
-       &__menu-block--open {
-         display: block;
-          position: fixed;
-          z-index: 2;
-          order: 1;
-          top: 0%;
-          left: 1%;
-          height: 100vh;
-          width: 98%;  
-         background-color: rgba($color: #3d3d3d, $alpha: 0.9);
-       }
-
-      &__menu {
-        top: 80px;
-        position: absolute;
-        
-      }
-
-      &__menu-list {
-        background-color: transparent;
-        
-      }
-
-  
-
-      &__title {
-        text-align: center;
-        font-size: 1.5em;
-      }
-
-      &__btn-banner {
-        display: none;
-      }
-      .select{
-        display: none;
-      }
+    &__logo {
+      display: none;
     }
-    
-   
-    .burger {
-      &__btn {
-        position: fixed;
-        z-index: 3;
-        width: 35px;
-        height: 35px;
-        left: 20px;
-        top: 25px;
-        background: transparent;
-        
-      }
 
-      &__img {
+    &__menu-block {
+      display: none;
+    }
+
+    &__menu-block--open {
+      display: block;
+      position: fixed;
+      z-index: 2;
+      order: 1;
+      top: 0%;
+      left: 1%;
+      height: 100vh;
+      width: 98%;
+      background-color: rgba($color: #3d3d3d, $alpha: 0.7);
+    }
+
+    &__menu {
+      display: block;
+      top: 80px;
+      position: absolute;
+      width: 100%;
+    }
+
+    &__menu-list {
+      background-color: transparent;
+      margin: 0;
+      display: block;
+      width: 100%;
+      position: relative;
+      top: 0;
+    }
+
+    &__submenu{
+      background-color: rgba($color: #3d3d3d, $alpha: 0.9);
+    }
+    &__submenu-list {
+      position: relative;
+    }
+    &__sub-submenu{
+      background-color: rgba($color: #241a1a, $alpha: 0.7);
+    }
+    &__sub-submenu-list {
+      position: relative;
+    }
+
+    .arrow {
+      position: absolute;
+      top: 15px;
+      right: 10px;
+    }
+
+    &__title {
+      text-align: center;
+      font-size: 1.5em;
+    }
+
+    &__btn-banner {
+      display: none;
+    }
+    .select {
+      display: none;
+    }
+  }
+// <- стили для бургера
+
+  .burger {
+    &__btn {
+      position: fixed;
+      z-index: 4;
+      width: 35px;
+      height: 35px;
+      left: 20px;
+      top: 25px;
+      background: transparent;
+    }
+
+    &__img {
+      display: block;
+      height: 2.5px;
+      width: 100%;
+      background-color: #666;
+      border: 0.3px solid white;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        z-index: 3;
+        left: 0;
         display: block;
         height: 2.5px;
         width: 100%;
-        background-color: #3d3d3d;
         border: 0.3px solid white;
-        
-        &::before,
-        &::after {
-          content: "";
-          position: absolute;
-          left: 0;
-          display: block;
-          height: 2.5px;
-          width: 100%;
-          background-color: #3d3d3d;
-          border: 0.3px solid white;
-          position: absolute;
-          transform: translateY(-8px);
-        }
-        &::after{
-            transform: translateY(7px); 
-        }
-
+        position: absolute;
+        transform: translateY(-8px);
       }
-      .close{
-          visibility: hidden;
-          &::before, &::after {
-              visibility: visible;
-              transform: rotate(45deg);
-              bottom: 9;
-          }
-          &::after{
-              transform: rotate(-45deg);
-              bottom: 9;
-          }
+      &::after {
+        transform: translateY(7px);
       }
     }
-
-   
-    }
-    
-    .points {
-      min-width: 320px;
-      &__container {
-        flex-direction: column;
-        align-items: center;
+    .close {
+      display: block;
+      visibility: hidden;
+      &::before,
+      &::after {
+        visibility: visible;
+        transform: rotate(45deg);
+        bottom: 9;
       }
-
-     
-    }
-    .points-item {
-        margin: 5px 0;
-     
-
-      &__title {
-          margin-top: 20px;
-      }
-
-   
-    }
-    .quote{
-      min-width: 320px;
-      width: 95%;
-    }
-    .howto {
-      min-width: 320px;
-     
-      &__title {
-          font-size: 1.5em;
-      }
-
-      &__row {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 30px;
-      }
-
-      &__column {
-        width: auto;
-      }
-    }
-    .howto-item {
-       
-      &__text {
-          margin: 18px 0;
-      }  
-    }
-    .partners {
-      min-width: 320px;
-      &__container {
-        flex-direction: column;
-      }
-
-      &__logo {
-        margin: 20px auto;
-      }
-
-      &__line {
-        transform: rotate(90deg);
-      }
-
-      &__item {
-        margin: auto;
-      }
-
-      &__title {
-        text-align: center;
-        margin: 0 auto;
-      }
-
-      &__text {
-        text-align: center;
-      }
-    }
-    
-    .kaplan-logo {
-        margin: 0 auto;
-    }
-    .mathhelp {
-      min-width: 320px;
-      &__container {
-        flex-direction: column;
-      }
-
-      &__item {
-        width: 90%;
-        margin: 8% auto;
-      }
-
-      &__title {
-        text-align: center;
-      }
-
-      &__text {
-        text-align: center;
-      }
-
-      &__btn {
-        margin: auto;
-      }
-
-      &__img {
-        width: 90%;
-      }
-    }
-    .footer {
-      min-width: 320px;
-        flex-direction: column;
-      &__logo {
-        margin: auto;
-      }
-
-      &__copyright {
-          margin: auto;
+      &::after {
+        transform: rotate(-45deg);
+        bottom: 9;
       }
     }
   }
+  //стили для бургера ->
+}
 
+.points {
+  min-width: 320px;
+  &__container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.points-item {
+  margin: 5px 0;
+
+  &__title {
+    margin-top: 20px;
+  }
+}
+.quote {
+  min-width: 320px;
+  width: 95%;
+}
+.howto {
+  min-width: 320px;
+
+  &__title {
+    font-size: 1.5em;
+  }
+
+  &__row {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  &__column {
+    width: auto;
+  }
+}
+.howto-item {
+  &__text {
+    margin: 18px 0;
+  }
+}
+.partners {
+  min-width: 320px;
+  &__container {
+    flex-direction: column;
+  }
+
+  &__logo {
+    margin: 20px auto;
+  }
+
+  &__line {
+    transform: rotate(90deg);
+  }
+
+  &__item {
+    margin: auto;
+  }
+
+  &__title {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  &__text {
+    text-align: center;
+  }
+}
+
+.kaplan-logo {
+  margin: 0 auto;
+}
+.mathhelp {
+  min-width: 320px;
+  &__container {
+    flex-direction: column;
+  }
+
+  &__item {
+    width: 90%;
+    margin: 8% auto;
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__text {
+    text-align: center;
+  }
+
+  &__btn {
+    margin: auto;
+  }
+
+  &__img {
+    width: 90%;
+  }
+}
+.footer {
+  min-width: 320px;
+  flex-direction: column;
+  &__logo {
+    margin: auto;
+  }
+
+  &__copyright {
+    margin: auto;
+  }
+}

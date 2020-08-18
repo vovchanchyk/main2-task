@@ -1,28 +1,18 @@
 .mouse {
   .header {
-   
-    &__top{
-     
+    a {
+      display: inline-block;
+      margin: 5px;
+      @media screen and (max-width: 767px) {
+        margin: 10px;
+        font-size: 1em;
+        position: relative;
+      }
     }
-    &__menu {
-      width: 392px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
     &__menu-list {
-      flex: 0 0 33%;
-      display: flex;
-      position: relative;
-      align-items: center;
-      justify-content: space-between;
-      height: auto;
-      padding: 5px;
       &:hover{
         background-color: rgba($color: #3d3d3d, $alpha: 0.5);
-      }
-
+      }  
       &:hover .header__submenu {
         display: block;
         position: absolute;
@@ -30,144 +20,51 @@
         width: 100%;
         left: 0;
         background-color: rgba($color: #3d3d3d, $alpha: 0.5);
+        @media screen and (max-width: 766px) {
+          position: relative;
+        }
       }
     }
 
     &__submenu-list {
-      position: relative;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-      padding: 5px;
       &:hover{
         background-color: rgba($color: #3d3d3d, $alpha: 0.7);
       }
       &:hover .header__sub-submenu {
-        width: 100%;
         display: block;
+        width: 100%;
         position: absolute;
         top: 0%;
         left: 100%;
-        background-color: rgba($color: #3d3d3d, $alpha: 0.5);
-      }
-    }
-
-    &__sub-submenu-list {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 5px;
-      width: 100%;
-      position: relative;
-      &:hover{
         background-color: rgba($color: #3d3d3d, $alpha: 0.7);
+        @media screen and (max-width: 766px) {
+          position: relative;
+          left: 0;
+        }
       }
     }
+    
   }
+  
+  
 }
 
+
 .touch {
-  a {
-    display: inline-block;
-    margin:  5px;
-    @media screen and (max-width:767px) {
-      margin: 20px ;
-      font-size: 1em;
-      position: relative;
-      
-    }
+   a {
+     display: inline-block;
+     margin: 5px;
+     @media screen and (max-width: 767px) {
+       margin: 10px;
+       font-size: 1em;
+       position: relative;
+     }
+   }
+  .arrow-rotate {
+    transform: rotate(90deg);
   }
 
-  .header {
-    &__top {
-      position: relative;
-      width: 90%;
-     
-     
-    }
-
-    &__menu-block {
-        position: absolute;
-        order: 1;
-        top: 100%;
-        height: auto;
-        width: 70%;  
-    }
-
-    &__menu {
-      width: 100%;
-      display: block;
-      top: 0px;  
-      
-    }
-    &__menu-list {
-      margin: 0 5px;
-      width: 30%;
-      display: inline-block;
-      position: relative;
-      vertical-align: text-top;
-      top: 0;
-      background-color: rgba($color: #3d3d3d, $alpha: 0.5);
-      @media screen and(max-width:767px) {
-        margin: 0;
-        width: 100%;
-        border-bottom: white 0.1px solid;
-        
-        
-      }
-    }
-    .open-submenu {
-      display: block;
-      position: relative;
-      top: 100%;
-      width: 100%;
-      padding: 5px 0 0 0;
-      @media screen and(max-width:767px) {
-        border-top: solid white 0.1px;
-        padding: 0;
-        
-      }
-    }
-
-    &__submenu-list {
-      position: relative;
-      display: block;
-      width: 100%;
-      // padding: 5px 0;
-      background-color: rgba($color: #656, $alpha: 0.6);
-      @media screen and(max-width:767px) {
-        border-bottom: white 0.1px solid;
-        padding: 0;
-        
-      }
-    }
-
-    &__sub-submenu-list {
-      width: 100%;
-      padding: 5px 0  0 0;
-      position: relative;
-      background-color: rgba($color: #888, $alpha: 0.9);
-      @media screen and(max-width:767px) {
-        border-bottom: white 0.1px solid;
-        padding: 0;
-        
-      }
-     
-    }
-
-    .arrow {
-      position: absolute;
-      top: 8px;
-      right: 5px;
-      @media screen and(max-width:767px) {
-        top: 20px;
-        right: 20px;
-        
-      }
-    }
-    .arrow-rotate{
-      transform: rotate(90deg);
-    }
+  .open-submenu{
+    display: block;
   }
 }
