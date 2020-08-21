@@ -10,61 +10,154 @@
       }
     }
     &__menu-list {
-      &:hover{
+      &:hover {
         background-color: rgba($color: #3d3d3d, $alpha: 0.5);
-      }  
-      &:hover .header__submenu {
-        display: block;
-        position: absolute;
-        top: 100%;
-        width: 100%;
-        left: 0;
-        background-color: rgba($color: #3d3d3d, $alpha: 0.5);
-        @media screen and (max-width: 766px) {
-          position: relative;
-        }
       }
-    }
-
-    &__submenu-list {
-      &:hover{
-        background-color: rgba($color: #3d3d3d, $alpha: 0.7);
-      }
-      &:hover .header__sub-submenu {
-        display: block;
-        width: 100%;
-        position: absolute;
-        top: 0%;
-        left: 100%;
-        background-color: rgba($color: #3d3d3d, $alpha: 0.7);
-        @media screen and (max-width: 766px) {
-          position: relative;
+      @media screen and(min-width:766px) {
+        &:hover .header__submenu {
+          display: block;
+          position: absolute;
+          top: 100%;
+          width: 100%;
           left: 0;
+          background-color: rgba($color: #3d3d3d, $alpha: 0.5);
+          @media screen and (max-width: 766px) {
+            position: absolute;
+          }
+        }
+      }
+
+      &__submenu-list {
+        &:hover {
+          background-color: rgba($color: #3d3d3d, $alpha: 0.7);
+        }
+        &:hover .header__sub-submenu {
+          display: block;
+          width: 100%;
+          position: absolute;
+          top: 0%;
+          left: 100%;
+          background-color: rgba($color: #3d3d3d, $alpha: 0.7);
+          @media screen and (max-width: 766px) {
+            position: absolute;
+            left: 0;
+          }
         }
       }
     }
-    
   }
-  
-  
 }
 
-
 .touch {
-   a {
-     display: inline-block;
-     margin: 5px;
-     @media screen and (max-width: 767px) {
-       margin: 10px;
-       font-size: 1em;
-       position: relative;
-     }
-   }
+  a {
+    display: inline-block;
+    margin: 5px;
+    @media screen and (max-width: 767px) {
+      margin: 10px;
+      font-size: 1em;
+      position: relative;
+    }
+  }
   .arrow-rotate {
     transform: rotate(90deg);
   }
 
-  .open-submenu{
+  .open-submenu {
     display: block;
+    background-color: rgba($color: #3d3d3d, $alpha: 0.5);
+    @media screen and (min-width: 1024px) {
+      position: absolute;
+      width: 100%;
+    }
+  }
+  .header__sub-submenu {
+    background-color: rgba($color: #241a1a, $alpha: 0.7);
+    @media screen and (min-width: 1024px) {
+      position: relative;
+    }
+  }
+}
+
+@media screen and(min-width:767px) and (max-width: 1024px) {
+  .header {
+    &__menu-block {
+      position: absolute;
+      order: 1;
+      top: 100%;
+      height: auto;
+      width: 70%;
+    }
+
+    &__menu {
+      width: 100%;
+      display: block;
+      top: 0px;
+    }
+
+    &__menu-list {
+      margin: 0 5px;
+      width: 30%;
+      display: inline-block;
+      position: relative;
+      vertical-align: text-top;
+      top: 0;
+      background-color: rgba($color: #3d3d3d, $alpha: 0.5);
+    }
+
+    &__submenu-list {
+      position: relative;
+      display: block;
+      width: 100%;
+      background-color: rgba($color: #656, $alpha: 0.6);
+    }
+  }
+}
+
+@media screen and(max-width:767px) {
+  .header {
+    &__menu-block {
+      display: none;
+    }
+
+    &__menu-block--open {
+      display: block;
+      position: fixed;
+      z-index: 2;
+      order: 1;
+      top: 0%;
+      left: 1%;
+      height: 100vh;
+      width: 98%;
+      background-color: rgba($color: #3d3d3d, $alpha: 0.7);
+    }
+
+    &__menu {
+      display: block;
+      top: 80px;
+      position: absolute;
+      width: 100%;
+    }
+
+    &__menu-list {
+      background-color: transparent;
+      margin: 0;
+      display: block;
+      width: 100%;
+      position: relative;
+      top: 0;
+    }
+
+    &__submenu {
+      background-color: rgba($color: #3d3d3d, $alpha: 0.9);
+    }
+    &__submenu-list {
+      position: relative;
+    }
+    &__sub-submenu {
+      background-color: rgba($color: #241a1a, $alpha: 0.7);
+    }
+    &__sub-submenu-list {
+      position: relative;
+    }
   }
 }

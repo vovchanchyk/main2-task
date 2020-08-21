@@ -89,11 +89,17 @@ function closePopup() {
     $('.popup').addClass('close');
     
 }
-// $('.popup__btn-close').on('click', closePopup);
+
 
 $('.popup__button').on('click',function () {
  let emailInput = $('.popup__input[type = email]');
- if(emailInput.val() != ""){
+ let email = emailInput.val();
+ function valid(email) {
+     let re = /\S+@\S+\.\S+/;
+     
+     return re.test(email)     
+ }
+ if(valid(email)){
     alert('thank you for order');
     closePopup() ;
     emailInput.val('');
@@ -101,7 +107,6 @@ $('.popup__button').on('click',function () {
  }else{
     alert(' fill email please');
 
- }
-    
-    
+ } 
+   
 })

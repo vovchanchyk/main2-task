@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
@@ -185,9 +186,9 @@ a {
   flex-shrink: 0;
 }
 .header__btn-top::before {
-  content: url(./img/header/Icon_button.png);
+  content: "";
   padding-right: 5px;
-  margin-top: 5px;
+  font-family: "Font Awesome 5 free", "Font Awesome 5 Brands";
 }
 .header__banner {
   width: 100%;
@@ -232,9 +233,9 @@ a {
   color: #fff;
 }
 .header__btn-banner::before {
-  content: url(./img/header/Icon_button.png);
+  content: "";
   padding-right: 5px;
-  margin-top: 5px;
+  font-family: "Font Awesome 5 free", "Font Awesome 5 Brands";
 }
 
 .points {
@@ -244,6 +245,7 @@ a {
   width: 100%;
   height: auto;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   margin: 81px auto 0px;
 }
@@ -461,9 +463,9 @@ a {
   margin-bottom: 50px;
 }
 .mathhelp__btn::before {
-  content: url(./img/header/Icon_button.png);
-  padding-right: 7px;
-  margin-top: 3px;
+  content: "";
+  padding-right: 5px;
+  font-family: "Font Awesome 5 free", "Font Awesome 5 Brands";
 }
 .mathhelp__img {
   width: 52.01%;
@@ -504,23 +506,25 @@ a {
 .mouse .header__menu-list:hover {
   background-color: rgba(61, 61, 61, 0.5);
 }
-.mouse .header__menu-list:hover .header__submenu {
-  display: block;
-  position: absolute;
-  top: 100%;
-  width: 100%;
-  left: 0;
-  background-color: rgba(61, 61, 61, 0.5);
-}
-@media screen and (max-width: 766px) {
+@media screen and (min-width: 766px) {
   .mouse .header__menu-list:hover .header__submenu {
-    position: relative;
+    display: block;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    left: 0;
+    background-color: rgba(61, 61, 61, 0.5);
   }
 }
-.mouse .header__submenu-list:hover {
+@media screen and (min-width: 766px) and (max-width: 766px) {
+  .mouse .header__menu-list:hover .header__submenu {
+    position: absolute;
+  }
+}
+.mouse .header__menu-list__submenu-list:hover {
   background-color: rgba(61, 61, 61, 0.7);
 }
-.mouse .header__submenu-list:hover .header__sub-submenu {
+.mouse .header__menu-list__submenu-list:hover .header__sub-submenu {
   display: block;
   width: 100%;
   position: absolute;
@@ -529,8 +533,8 @@ a {
   background-color: rgba(61, 61, 61, 0.7);
 }
 @media screen and (max-width: 766px) {
-  .mouse .header__submenu-list:hover .header__sub-submenu {
-    position: relative;
+  .mouse .header__menu-list__submenu-list:hover .header__sub-submenu {
+    position: absolute;
     left: 0;
   }
 }
@@ -551,8 +555,94 @@ a {
 }
 .touch .open-submenu {
   display: block;
+  background-color: rgba(61, 61, 61, 0.5);
+}
+@media screen and (min-width: 1024px) {
+  .touch .open-submenu {
+    position: absolute;
+    width: 100%;
+  }
+}
+.touch .header__sub-submenu {
+  background-color: rgba(36, 26, 26, 0.7);
+}
+@media screen and (min-width: 1024px) {
+  .touch .header__sub-submenu {
+    position: relative;
+  }
 }
 
+@media screen and (min-width: 767px) and (max-width: 1024px) {
+  .header__menu-block {
+    position: absolute;
+    order: 1;
+    top: 100%;
+    height: auto;
+    width: 70%;
+  }
+  .header__menu {
+    width: 100%;
+    display: block;
+    top: 0px;
+  }
+  .header__menu-list {
+    margin: 0 5px;
+    width: 30%;
+    display: inline-block;
+    position: relative;
+    vertical-align: text-top;
+    top: 0;
+    background-color: rgba(61, 61, 61, 0.5);
+  }
+  .header__submenu-list {
+    position: relative;
+    display: block;
+    width: 100%;
+    background-color: rgba(102, 85, 102, 0.6);
+  }
+}
+@media screen and (max-width: 767px) {
+  .header__menu-block {
+    display: none;
+  }
+  .header__menu-block--open {
+    display: block;
+    position: fixed;
+    z-index: 2;
+    order: 1;
+    top: 0%;
+    left: 1%;
+    height: 100vh;
+    width: 98%;
+    background-color: rgba(61, 61, 61, 0.7);
+  }
+  .header__menu {
+    display: block;
+    top: 80px;
+    position: absolute;
+    width: 100%;
+  }
+  .header__menu-list {
+    background-color: transparent;
+    margin: 0;
+    display: block;
+    width: 100%;
+    position: relative;
+    top: 0;
+  }
+  .header__submenu {
+    background-color: rgba(61, 61, 61, 0.9);
+  }
+  .header__submenu-list {
+    position: relative;
+  }
+  .header__sub-submenu {
+    background-color: rgba(36, 26, 26, 0.7);
+  }
+  .header__sub-submenu-list {
+    position: relative;
+  }
+}
 .form {
   margin-top: 95px;
   display: flex;
@@ -674,33 +764,6 @@ a {
     position: relative;
     width: 90%;
   }
-  .header__menu-block {
-    position: absolute;
-    order: 1;
-    top: 100%;
-    height: auto;
-    width: 70%;
-  }
-  .header__menu {
-    width: 100%;
-    display: block;
-    top: 0px;
-  }
-  .header__menu-list {
-    margin: 0 5px;
-    width: 30%;
-    display: inline-block;
-    position: relative;
-    vertical-align: text-top;
-    top: 0;
-    background-color: rgba(61, 61, 61, 0.5);
-  }
-  .header__submenu-list {
-    position: relative;
-    display: block;
-    width: 100%;
-    background-color: rgba(102, 85, 102, 0.6);
-  }
 
   .arrow {
     position: absolute;
@@ -770,46 +833,6 @@ a {
   .header__logo {
     display: none;
   }
-  .header__menu-block {
-    display: none;
-  }
-  .header__menu-block--open {
-    display: block;
-    position: fixed;
-    z-index: 2;
-    order: 1;
-    top: 0%;
-    left: 1%;
-    height: 100vh;
-    width: 98%;
-    background-color: rgba(61, 61, 61, 0.7);
-  }
-  .header__menu {
-    display: block;
-    top: 80px;
-    position: absolute;
-    width: 100%;
-  }
-  .header__menu-list {
-    background-color: transparent;
-    margin: 0;
-    display: block;
-    width: 100%;
-    position: relative;
-    top: 0;
-  }
-  .header__submenu {
-    background-color: rgba(61, 61, 61, 0.9);
-  }
-  .header__submenu-list {
-    position: relative;
-  }
-  .header__sub-submenu {
-    background-color: rgba(36, 26, 26, 0.7);
-  }
-  .header__sub-submenu-list {
-    position: relative;
-  }
   .header .arrow {
     position: absolute;
     top: 15px;
@@ -870,108 +893,108 @@ a {
     transform: rotate(-45deg);
     bottom: 9;
   }
-}
-.points {
-  min-width: 320px;
-}
-.points__container {
-  flex-direction: column;
-  align-items: center;
-}
 
-.points-item {
-  margin: 5px 0;
-}
-.points-item__title {
-  margin-top: 20px;
-}
+  .points {
+    min-width: 320px;
+  }
+  .points__container {
+    flex-direction: column;
+    align-items: center;
+  }
 
-.quote {
-  min-width: 320px;
-  width: 95%;
-}
+  .points-item {
+    margin: 5px 0;
+  }
+  .points-item__title {
+    margin-top: 20px;
+  }
 
-.howto {
-  min-width: 320px;
-}
-.howto__title {
-  font-size: 1.5em;
-}
-.howto__row {
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 30px;
-}
-.howto__column {
-  width: auto;
-}
+  .quote {
+    min-width: 320px;
+    width: 95%;
+  }
 
-.howto-item__text {
-  margin: 18px 0;
-}
+  .howto {
+    min-width: 320px;
+  }
+  .howto__title {
+    font-size: 1.5em;
+  }
+  .howto__row {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  .howto__column {
+    width: auto;
+  }
 
-.partners {
-  min-width: 320px;
-}
-.partners__container {
-  flex-direction: column;
-}
-.partners__logo {
-  margin: 20px auto;
-}
-.partners__line {
-  transform: rotate(90deg);
-}
-.partners__item {
-  margin: auto;
-}
-.partners__title {
-  text-align: center;
-  margin: 0 auto;
-}
-.partners__text {
-  text-align: center;
-}
+  .howto-item__text {
+    margin: 18px 0;
+  }
 
-.kaplan-logo {
-  margin: 0 auto;
-}
+  .partners {
+    min-width: 320px;
+  }
+  .partners__container {
+    flex-direction: column;
+  }
+  .partners__logo {
+    margin: 20px auto;
+  }
+  .partners__line {
+    transform: rotate(90deg);
+  }
+  .partners__item {
+    margin: auto;
+  }
+  .partners__title {
+    text-align: center;
+    margin: 0 auto;
+  }
+  .partners__text {
+    text-align: center;
+  }
 
-.mathhelp {
-  min-width: 320px;
-}
-.mathhelp__container {
-  flex-direction: column;
-}
-.mathhelp__item {
-  width: 90%;
-  margin: 8% auto;
-}
-.mathhelp__title {
-  text-align: center;
-}
-.mathhelp__text {
-  text-align: center;
-}
-.mathhelp__btn {
-  margin: auto;
-}
-.mathhelp__img {
-  width: 90%;
-}
+  .kaplan-logo {
+    margin: 0 auto;
+  }
 
-.footer {
-  min-width: 320px;
-  flex-direction: column;
-}
-.footer__logo {
-  margin: auto;
-}
-.footer__copyright {
-  margin: auto;
-}
+  .mathhelp {
+    min-width: 320px;
+  }
+  .mathhelp__container {
+    flex-direction: column;
+  }
+  .mathhelp__item {
+    width: 90%;
+    margin: 8% auto;
+  }
+  .mathhelp__title {
+    text-align: center;
+  }
+  .mathhelp__text {
+    text-align: center;
+  }
+  .mathhelp__btn {
+    margin: auto;
+  }
+  .mathhelp__img {
+    width: 90%;
+  }
 
+  .footer {
+    min-width: 320px;
+    flex-direction: column;
+  }
+  .footer__logo {
+    margin: auto;
+  }
+  .footer__copyright {
+    margin: auto;
+  }
+}
 .popup {
   position: fixed;
   left: 0;
@@ -986,7 +1009,7 @@ a {
 }
 .popup__body {
   max-width: 400px;
-  height: 250px;
+  height: 285px;
   min-width: 310px;
   border-radius: 20%;
 }

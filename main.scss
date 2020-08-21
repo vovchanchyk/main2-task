@@ -38,6 +38,7 @@ a {
     margin: 23px auto 0px;
     
   }
+  
 
   &__menu{
     width: 392px;
@@ -91,9 +92,12 @@ a {
     @include btn(107px, 37px, $fern);
     flex-shrink: 0;
     &::before {
-      content: url(./img/header/Icon_button.png);
+      content: '\f007';
       padding-right: 5px;
-      margin-top: 5px;
+      font-family: 'Font Awesome 5 free','Font Awesome 5 Brands';
+      // font-size: 14px;
+      // font-weight: 900;
+      // display: block;
     }
   }
 
@@ -133,9 +137,9 @@ a {
     margin: 75px auto;
     @include btn(180px, 37px, $fern);
     &::before {
-      content: url(./img/header/Icon_button.png);
+      content: '\f007';
       padding-right: 5px;
-      margin-top: 5px;
+      font-family: 'Font Awesome 5 free','Font Awesome 5 Brands';
     }
   }
 }
@@ -146,6 +150,7 @@ a {
     width: 100%;
     height: auto;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     margin: 81px auto 0px;
     
@@ -357,9 +362,9 @@ a {
     @include btn(192px, 37px, $fern);
     margin-bottom: 50px;
     &::before {
-      content: url(./img/header/Icon_button.png);
-      padding-right: 7px;
-      margin-top: 3px;
+      content: '\f007';
+      padding-right: 5px;
+      font-family: 'Font Awesome 5 free','Font Awesome 5 Brands';
     }
   }
 
