@@ -158,6 +158,8 @@ a {
   background-color: rgba(61, 61, 61, 0.7);
 }
 .header .arrow {
+  color: white;
+  font-size: 12px;
   position: absolute;
   top: 7px;
   right: 5px;
@@ -516,26 +518,17 @@ a {
     background-color: rgba(61, 61, 61, 0.5);
   }
 }
-@media screen and (min-width: 766px) and (max-width: 766px) {
-  .mouse .header__menu-list:hover .header__submenu {
-    position: absolute;
-  }
-}
-.mouse .header__menu-list__submenu-list:hover {
+.mouse .header__submenu-list:hover {
   background-color: rgba(61, 61, 61, 0.7);
 }
-.mouse .header__menu-list__submenu-list:hover .header__sub-submenu {
-  display: block;
-  width: 100%;
-  position: absolute;
-  top: 0%;
-  left: 100%;
-  background-color: rgba(61, 61, 61, 0.7);
-}
-@media screen and (max-width: 766px) {
-  .mouse .header__menu-list__submenu-list:hover .header__sub-submenu {
+@media screen and (min-width: 766px) {
+  .mouse .header__submenu-list:hover .header__sub-submenu {
+    display: block;
+    width: 100%;
     position: absolute;
-    left: 0;
+    top: 0%;
+    left: 100%;
+    background-color: rgba(61, 61, 61, 0.7);
   }
 }
 
@@ -551,7 +544,7 @@ a {
   }
 }
 .touch .arrow-rotate {
-  transform: rotate(90deg);
+  transform: rotate(-180deg);
 }
 .touch .open-submenu {
   display: block;
@@ -1006,89 +999,6 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.popup__body {
-  max-width: 400px;
-  height: 285px;
-  min-width: 310px;
-  border-radius: 20%;
-}
-.popup__head {
-  height: 28px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  position: relative;
-  background-color: #666;
-}
-.popup__btn-close {
-  height: 100%;
-  background: transparent;
-  width: 25px;
-  height: 25px;
-}
-.popup__close {
-  display: block;
-  height: 1.5px;
-  width: 100%;
-  background-color: #ffff;
-  position: relative;
-  visibility: hidden;
-}
-.popup__close::before, .popup__close::after {
-  content: "";
-  visibility: visible;
-  position: absolute;
-  display: block;
-  height: 1.5px;
-  width: 25px;
-  background-color: #ffff;
-  transform: rotate(45deg);
-}
-.popup__close::after {
-  transform: rotate(-45deg);
-}
-.popup__form {
-  height: calc(100% - 20px);
-  background-color: #666;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-}
-.popup__title {
-  font-family: "Segoe UI regular";
-  font-size: 1.5em;
-  color: white;
-}
-.popup__inputs {
-  height: auto;
-  width: 65%;
-}
-.popup__input {
-  display: block;
-  width: 100%;
-  margin: 20px auto;
-  height: 35px;
-  border-radius: 10px;
-}
-.popup__button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 19px;
-  background-color: #5cb85c;
-  width: 107px;
-  height: 37px;
-  font-family: "Segoe UI semibold";
-  font-size: 0.778em;
-  color: #fff;
-  flex-shrink: 0;
-}
-.popup__button::before {
-  content: url(./img/header/Icon_button.png);
-  padding-right: 5px;
-  margin-top: 5px;
 }
 
 .close {
