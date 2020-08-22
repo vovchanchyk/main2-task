@@ -1,18 +1,107 @@
-
 .popup {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 4;
-    background-color: rgba($color: #000000, $alpha: 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-   
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  background-color: rgba($color: #000000, $alpha: 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.close{
-    display: none;
+
+.login {
+  width: 450px;
+  min-width: 320px;
+  background-color: white;
+  position: relative;
+  padding: 10px 10px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+  &__close {
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    width: 25px;
+    height: 25px;
+    
+  }
+  &__close-img {
+    width: 100%;
+    display: block;
+    background-color: #000;
+    height: 2px;
+    visibility: hidden;
+    margin-top: 5px;
+
+    &::before,
+    &::after {
+      content: "";
+      width: 100%;
+      display: block;
+      background-color: #000;
+      height: 2px;
+      position: absolute;
+      transform: rotate(45deg);
+      visibility: visible;
+    }
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__row {
+    border: solid black 0.3px;
+    margin-top: 10px;
+    display: flex;
+  }
+
+  &__input {
+    flex-grow: 1;
+    padding: 5px;
+  }
+  &__icon {
+    align-self: center;
+    margin-right: 3px;
+    font-size: 16px;
+  }
+  &__btn {
+    margin: 15px auto 0px;
+    display: block;
+    padding: 5px 10px;
+  }
+  &__btn-text {
+  }
+}
+.fas {
+}
+.fa-times {
+}
+.far {
+}
+.fa-user {
+  margin-right: 5px;
+}
+
+.fa-envelope {
+  margin-right: 4px;
+}
+.fa-eye {
+}
+.showPass {
+}
+.fa-paper-plane {
+}
+
+.incorrect{
+    border:  red solid;
+}
+
+.close {
+  display: none;
 }
