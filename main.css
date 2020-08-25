@@ -531,6 +531,25 @@ a {
     background-color: rgba(61, 61, 61, 0.7);
   }
 }
+.mouse .header .arrow-rotate {
+  transform: rotate(-180deg);
+}
+.mouse .header .open-submenu {
+  display: block;
+  background-color: rgba(61, 61, 61, 0.5);
+}
+@media screen and (min-width: 1024px) {
+  .mouse .header .open-submenu {
+    position: absolute;
+    width: 100%;
+  }
+}
+.mouse .header .header__submenu {
+  background-color: rgba(102, 102, 102, 0.8);
+}
+.mouse .header .header__sub-submenu {
+  background-color: rgba(36, 26, 26, 0.8);
+}
 
 .touch a {
   display: inline-block;

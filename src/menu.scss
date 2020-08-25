@@ -40,6 +40,28 @@
         }
       }
     }
+    .arrow-rotate{
+      transform: rotate(-180deg);
+    }
+    .open-submenu {
+      display: block;
+      background-color: rgba($color: #3d3d3d, $alpha: 0.5);
+      @media screen and (min-width: 1024px) {
+        position: absolute;
+        width: 100%;
+      }
+    }
+    .header__submenu{
+      background-color: rgba($color: #666, $alpha: 0.8);
+
+    }
+    .header__sub-submenu{
+      
+        background-color: rgba($color: #241a1a, $alpha: 0.8);
+        
+      
+    }
+
   }
 }
 

@@ -34,6 +34,21 @@ if (isMobile.any()) {
   });
 } else {
   body.addClass("mouse");
+  let arrowMenu = $(".arrow");
+  arrowMenu.on("click", function () {
+    if($(window).width()< 768){
+    $(this).toggleClass("arrow-rotate");
+    $(this).next().toggleClass("open-submenu");
+    }
+  });
+  $(window).resize(function () {
+    if($(window).width()>768){
+    arrowMenu.removeClass("arrow-rotate")
+    arrowMenu.next().removeClass("open-submenu")
+    }
+    
+  })
+
 }
 
 let selected = function () {
