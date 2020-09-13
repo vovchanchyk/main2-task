@@ -67,28 +67,23 @@ if (isMobile.any()) {
   });
 }
 
-let selected = function () {
-  let selectHead = $(".select__head");
-  let selectItem = $(".select__item");
-  function openSelect(params) {
-    $(this).parent().toggleClass("is-active");
-    
-  }
+// select-------
+let selectHead = $(".select__head");
+let selectItem = $(".select__item");
 
-  function selectChoose() {
-    let text = $(this).text();
-    let select = $(this).closest(".select");
-    let currentText = select.find(".select__val");
-    currentText.text(text);
-    select.toggleClass("is-active");
-  }
+selectHead.on("click", function () {
+  $(this).parent().toggleClass("is-active");
+});
 
-  selectHead.on("click", openSelect);
-  selectItem.on("click", selectChoose);
-};
+selectItem.on("click", function () {
+  let text = $(this).text();
+  let select = $(this).closest(".select");
+  let currentText = select.find(".select__val");
+  currentText.text(text);
+  select.toggleClass("is-active");
+});
 
-selected();
-
+//клик по экрану------
 $(document).on("click", function (event) {
   if (
     $(".select").is(event.target) != true &&
@@ -98,20 +93,20 @@ $(document).on("click", function (event) {
   }
 
   if ($(".header__menu").hasClass("parent")) {
-    if($('header__menu').is(event.target) != true &&
-     $(".header__menu").has(event.target).length === 0
-    ){
+    if (
+      $("header__menu").is(event.target) != true &&
+      $(".header__menu").has(event.target).length === 0
+    ) {
       $(".open-submenu").removeClass("open-submenu");
       $(".arrow-rotate").removeClass("arrow-rotate");
     }
   }
 });
 
-
-
+// поле поиска---------
 let searchF = $(".search__val");
 
-function searchIn(params) {
+function searchIn() {
   let valInput = $(this).val();
   let elements = $(".search__item");
   if (valInput != "") {
@@ -135,7 +130,7 @@ function searchIn(params) {
 }
 
 searchF.on("input", searchIn);
-
+// бургур----------
 function burger() {
   $(".burger__img").toggleClass("close");
   $(".header__menu-block").toggleClass("header__menu-block--open");
@@ -144,12 +139,11 @@ function showPopup() {
   $(".popup").removeClass("close");
 }
 function closePopup() {
-  $(".popup").addClass("close"); //-----
+  $(".popup").addClass("close");
 }
 $("#close").on("click", closePopup);
 
 $(".popup").on("click", function (event) {
-  //-- можно впихнуть тру
   if (
     $(".login").is(event.target) != true &&
     $(".login").has(event.target).length === 0 &&
@@ -160,7 +154,6 @@ $(".popup").on("click", function (event) {
 });
 
 let eye = $(".showPass");
-
 function showPass() {
   let input = $("#password");
   if (input.attr("type") == "password") {
