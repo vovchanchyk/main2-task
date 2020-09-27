@@ -36,52 +36,39 @@ a {
     justify-content: space-between;
     align-items: center;
     margin: 23px auto 0px;
-    
   }
-  
 
-  &__menu{
-    width: 392px;
+  &__menu {
+    width: 410px;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  &__menu-list{
+  &__menu-list {
     display: block;
     position: relative;
     width: 33%;
-   
   }
-  &__submenu-list{
+  &__submenu-list {
     position: relative;
-   
-      
   }
-  &__sub-submenu-list{
-    &:hover{
+  &__sub-submenu-list {
+    &:hover {
       background-color: rgba($color: #3d3d3d, $alpha: 0.7);
     }
-
   }
-   .arrow{
-     color: white;
-     font-size: 12px;
+  .arrow {
+    color: white;
+    font-size: 12px;
     position: absolute;
     top: 7px;
     right: 5px;
-    
-   }
-  
+  }
 
   &__logo {
     width: 167px;
     height: 26px;
   }
-
- 
-
-
-
 
   &__submenu {
     display: none;
@@ -94,12 +81,9 @@ a {
     @include btn(107px, 37px, $fern);
     flex-shrink: 0;
     &::before {
-      content: '\f007';
+      content: "\f007";
       padding-right: 5px;
-      font-family: 'Font Awesome 5 free','Font Awesome 5 Brands';
-      // font-size: 14px;
-      // font-weight: 900;
-      // display: block;
+      font-family: "Font Awesome 5 free", "Font Awesome 5 Brands";
     }
   }
 
@@ -127,11 +111,9 @@ a {
 
   &__form {
     display: flex;
-
     align-items: flex-start;
     justify-content: space-between;
     margin-top: 95px;
-
     box-sizing: border-box;
   }
 
@@ -139,9 +121,9 @@ a {
     margin: 75px auto;
     @include btn(180px, 37px, $fern);
     &::before {
-      content: '\f007';
+      content: "\f007";
       padding-right: 5px;
-      font-family: 'Font Awesome 5 free','Font Awesome 5 Brands';
+      font-family: "Font Awesome 5 free", "Font Awesome 5 Brands";
     }
   }
 }
@@ -155,7 +137,6 @@ a {
     flex-direction: row;
     justify-content: center;
     margin: 81px auto 0px;
-    
   }
 
   &__column {
@@ -254,12 +235,8 @@ a {
     width: calc(20% - (13.2px * 2));
     margin: 0 13.2px;
   }
-  
-  
 }
 .howto-item {
-  
-  
   &__avatar {
     margin: auto;
     border: $blue dashed 1px;
@@ -269,7 +246,6 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-   
   }
 
   &__img {
@@ -329,9 +305,6 @@ a {
   &__text--blue {
     color: $blue;
   }
-  
-
-
 }
 
 .mathhelp {
@@ -364,9 +337,9 @@ a {
     @include btn(192px, 37px, $fern);
     margin-bottom: 50px;
     &::before {
-      content: '\f007';
+      content: "\f007";
       padding-right: 5px;
-      font-family: 'Font Awesome 5 free','Font Awesome 5 Brands';
+      font-family: "Font Awesome 5 free", "Font Awesome 5 Brands";
     }
   }
 
@@ -375,8 +348,6 @@ a {
     margin-left: 50px;
     align-self: flex-end;
   }
- 
-  
 }
 
 .footer {
@@ -396,9 +367,9 @@ a {
     @include fonts($regular, $fSmall, $white);
     margin-right: 225px;
   }
-  
- }
+}
 @import "./src/menu.scss";
 @import "./src/form.scss";
 @import "./src/media.scss";
 @import "./src/popup.scss";
+@import "./src/goUp.scss";

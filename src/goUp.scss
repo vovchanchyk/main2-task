@@ -1,0 +1,13 @@
+.btn-goUp {
+    display: none;
+    position: fixed;
+    bottom: 10%;
+    right: 10%;
+    vertical-align: text-top;
+  &::before {
+    content: "\f35b";
+    padding-right: 5px;
+    padding-top: 3px;
+    font-family: "Font Awesome 5 free", "Font Awesome 5 Brands";
+  }
+}

@@ -74,7 +74,7 @@
 }
 
 
-@media screen and(max-width:766px) {
+@media only screen and(max-device-width:766px) {
   .header {
     min-width: 320px;
     height: 100vh;
@@ -134,6 +134,7 @@
         border: 0.3px solid white;
         position: absolute;
         transform: translateY(-8px);
+        background-color: #666;
       }
       &::after {
         transform: translateY(7px);

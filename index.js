@@ -1,71 +1,3 @@
-let isMobile = {
-  Android: function () {
-    return navigator.userAgent.match(/Android/i);
-  },
-  BlackBerry: function () {
-    return navigator.userAgent.match(/BlackBerry/i);
-  },
-  iOS: function () {
-    return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-  },
-  Opera: function () {
-    return navigator.userAgent.match(/Opera Mini/i);
-  },
-  Windows: function () {
-    return navigator.userAgent.match(/IEMobile/i);
-  },
-  any: function () {
-    return (
-      isMobile.Android() ||
-      isMobile.BlackBerry() ||
-      isMobile.iOS() ||
-      isMobile.Opera() ||
-      isMobile.Windows()
-    );
-  },
-};
-let body = $("body");
-if (isMobile.any()) {
-  body.addClass("touch");
-  let arrowMenu = $(".arrow");
-  arrowMenu.on("click", function () {
-    let parent = $(this).closest(".menu");
-    parent.toggleClass("parent");
-    $(this).toggleClass("arrow-rotate");
-    $(this).next().toggleClass("open-submenu");
-    if (parent.find(".open-submenu").length > 0) {
-      parent.find(".open-submenu").removeClass("open-submenu");
-      parent.find(".arrow-rotate").removeClass("arrow-rotate");
-      $(this).toggleClass("arrow-rotate");
-      $(this).next().toggleClass("open-submenu");
-    }
-    $(window).resize(function () {
-      if ($(window).width() > 768) {
-        arrowMenu.removeClass("arrow-rotate");
-        arrowMenu.next().removeClass("open-submenu");
-        $(".header__menu-block").removeClass("header__menu-block--open");
-        $(".burger__img").removeClass("close");
-      }
-    });
-  });
-} else {
-  body.addClass("mouse");
-  let arrowMenu = $(".arrow");
-  arrowMenu.on("click", function () {
-    if ($(window).width() < 768) {
-      $(this).toggleClass("arrow-rotate");
-      $(this).next().toggleClass("open-submenu");
-    }
-  });
-  $(window).resize(function () {
-    if ($(window).width() > 768) {
-      arrowMenu.removeClass("arrow-rotate");
-      arrowMenu.next().removeClass("open-submenu");
-      $(".header__menu-block").removeClass("header__menu-block--open");
-      $(".burger__img").removeClass("close");
-    }
-  });
-}
 
 // select-------
 let selectHead = $(".select__head");
@@ -90,16 +22,6 @@ $(document).on("click", function (event) {
     $(".select").has(event.target).length === 0
   ) {
     $(".select").removeClass("is-active");
-  }
-
-  if ($(".header__menu").hasClass("parent")) {
-    if (
-      $("header__menu").is(event.target) != true &&
-      $(".header__menu").has(event.target).length === 0
-    ) {
-      $(".open-submenu").removeClass("open-submenu");
-      $(".arrow-rotate").removeClass("arrow-rotate");
-    }
   }
 });
 
@@ -134,13 +56,29 @@ searchF.on("input", searchIn);
 function burger() {
   $(".burger__img").toggleClass("close");
   $(".header__menu-block").toggleClass("header__menu-block--open");
+  $('body').toggleClass('noscroll')
 }
+
+
+
+
 function showPopup() {
   $(".popup").removeClass("close");
+  $('body').addClass('noscroll')
 }
+
+let inputs = document.querySelectorAll('.login input');
+
 function closePopup() {
   $(".popup").addClass("close");
+  $('body').removeClass('noscroll')
+  for(let i = 0; i < inputs.length; i++) {
+    inputs[i].value = ''
+    
+  }
 }
+
+
 $("#close").on("click", closePopup);
 
 $(".popup").on("click", function (event) {
@@ -152,6 +90,8 @@ $(".popup").on("click", function (event) {
     closePopup();
   }
 });
+
+
 
 let eye = $(".showPass");
 function showPass() {
@@ -170,63 +110,49 @@ eye.on("click", function () {
   showPass();
 });
 
-$("#password").on("input", function () {
-  if (
-    $(this).val() != "" &&
-    ($(this).val().length < 5 || $(this).val().length > 9)
-  ) {
-    $(this).parent().addClass("incorrect");
-  } else {
-    $(this).parent().removeClass("incorrect");
-  }
-});
 
-function validPass() {
-  let valPass = $("#password").val();
-  let reg = /[A-Za-z1-9]{5,9}/;
-  if (valPass.length <= 9 && reg.test(valPass)) {
-    return true;
-  }
+
+for (let i = 0; i < inputs.length; i++) {
+  inputs[i].addEventListener('input', function () {
+    inputs[i].parentElement.nextElementSibling.innerText= ' ';
+    inputs[i].parentElement.classList.remove('login__row--error')
+  })
+  
 }
 
-function validEmail() {
-  let valEmail = $("#email").val();
-  let re = /\S+@\S+\.\S+/;
-  if (valEmail != "" && re.test(valEmail)) {
-    return true;
-  } else {
-    alert("enter valid email");
+document.querySelector('.popup .login').onsubmit = function (e) {
+  let valid = true;
+  for(i=0;i<inputs.length;i++){
+    if(!inputs[i].validity.valid){
+      inputs[i].parentElement.classList.add('login__row--error')
+      inputs[i].parentElement.nextElementSibling.innerText= 'please fill this fieled correctly';
+      valid = false;
+    }
   }
+  if (!valid) {
+     e.preventDefault()
+  
+  }else{
+    alert('thank you')
+  }
+
+}
+let btnTop = document.querySelector('.btn-goUp')
+window.addEventListener('scroll', function () {
+  if( pageYOffset > 600){
+    btnTop.style.display = "block";
+    btnTop.innerHTML = Math.round( pageYOffset)
+}else{
+    btnTop.style.display = "none";
 }
 
-function validName() {
-  let valName = $("#name").val();
-  if (valName != "") {
-    return true;
-  }
+} )
+
+btnTop.onclick = function () {
+  window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    })
+  
 }
 
-function correct() {
-  if (validName() && validPass() && validEmail() != true) {
-    $("#email").val("");
-    $("#email").attr("placeholder", "enter the input");
-  } else if (validPass() != true && validEmail() && validName()) {
-    $("#password").val("");
-    $("#password").attr("placeholder", "enter the input");
-  } else if (validPass() && validEmail() && validName() != true) {
-    $("#name").val("");
-    $("#name").attr("placeholder", "enter the input");
-  } else if (validPass() && validEmail() && validName()) {
-    alert("thank you");
-    $(".login__input").val("");
-    closePopup();
-  } else {
-    $(".login__input").val("");
-    $(".login__input").attr("placeholder", "enter the input");
-  }
-}
-
-$(".login__btn").on("click", function () {
-  correct();
-  console.log(1);
-});

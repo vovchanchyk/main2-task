@@ -396,30 +396,34 @@
             <span class="footer__copyright">MathHelp 2017© All Rights Reserved.</span>
         </footer>
         <div class="popup close">
-            <form action="#" class="login" id="login">
+            <form action="" class="login" id="login" novalidate>
                 <div class="login__close" id="close">
                     <span class="login__close-img"></span>
                 </div>
                 <h2 class="login__title">login</h2>
                 <div class="login__row">
-                    <input class="login__input" type="text" id="name">
+                    <input class="login__input" type="text" id="name" required>
                     <i class="far fa-user login__icon"></i>
                 </div>
+                <span></span>
                 <div class="login__row">
-                    <input class="login__input" type="text" id="email" >
+                    <input class="login__input" type="text" id="email" pattern="[a-zA-Z0-9]{1,63}@[a-zA-Z0-9]{1,63}\.[a-zA-Z0-9]{1,5}" required>
                     <i class="far fa-envelope login__icon"></i>
                 </div>
+                <span></span>
                 <div class="login__row ">
-                    <input class="login__input" type="password" id="password">
+                    <input class="login__input" type="password" id="password" minlength="5" maxlength="10" required>
                     <i class="far fa-eye login__icon showPass" ></i>
                     
                 </div>
+                <span></span>
                     <button class="login__btn" id>
                         <i class="far fa-paper-plane"></i>
                         <span class="login__btn-text">send in</span>
                     </button>
             </form>
         </div>
+        <button class=" header__btn-top  btn-goUp" >Go up</button>
     
 </body>
 

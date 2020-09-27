@@ -60,11 +60,17 @@
     margin-top: 10px;
     display: flex;
   }
+  &__row--error {
+    border: solid red 0.5px;
+    margin-top: 10px;
+    display: flex;
+  }
 
   &__input {
     flex-grow: 1;
     padding: 5px;
   }
+  
   &__icon {
     align-self: center;
     margin-right: 3px;
