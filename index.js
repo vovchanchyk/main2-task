@@ -1,4 +1,3 @@
-
 // select-------
 let selectHead = $(".select__head");
 let selectItem = $(".select__item");
@@ -56,28 +55,24 @@ searchF.on("input", searchIn);
 function burger() {
   $(".burger__img").toggleClass("close");
   $(".header__menu-block").toggleClass("header__menu-block--open");
-  $('body').toggleClass('noscroll')
+  $("body").toggleClass("noscroll");
 }
-
-
-
 
 function showPopup() {
   $(".popup").removeClass("close");
-  $('body').addClass('noscroll')
+  $("body").addClass("noscroll");
 }
 
-let inputs = document.querySelectorAll('.login input');
+let inputs = document.querySelectorAll(".login input");
 
 function closePopup() {
   $(".popup").addClass("close");
-  $('body').removeClass('noscroll')
-  for(let i = 0; i < inputs.length; i++) {
-    inputs[i].value = ''
-    
+  $("body").removeClass("noscroll");
+  $("label").text("");
+  for (let i = 0; i < inputs.length; i++) {
+    inputs[i].value = "";
   }
 }
-
 
 $("#close").on("click", closePopup);
 
@@ -90,8 +85,6 @@ $(".popup").on("click", function (event) {
     closePopup();
   }
 });
-
-
 
 let eye = $(".showPass");
 function showPass() {
@@ -111,48 +104,46 @@ eye.on("click", function () {
 });
 
 
+$(".popup .login").validate({
+  rules: {
+    email: {
+      required: true,
+      email: true,
+    },
+    login: {
+      required: true,
+    },
+    password: {
+      required: true,
+    },
+  },
+  messages: {
+    email: {
+      required: "пожалуйста заполните это поле",
+      email: " пожалуйста введите валидный email",
+    },
+    login: {
+      required: "пожалуйста заполните это поле",
+    },
+    password: {
+      required: "пожалуйста заполните это поле",
+    },
+  },
+});
 
-for (let i = 0; i < inputs.length; i++) {
-  inputs[i].addEventListener('input', function () {
-    inputs[i].parentElement.nextElementSibling.innerText= ' ';
-    inputs[i].parentElement.classList.remove('login__row--error')
-  })
-  
-}
-
-document.querySelector('.popup .login').onsubmit = function (e) {
-  let valid = true;
-  for(i=0;i<inputs.length;i++){
-    if(!inputs[i].validity.valid){
-      inputs[i].parentElement.classList.add('login__row--error')
-      inputs[i].parentElement.nextElementSibling.innerText= 'please fill this fieled correctly';
-      valid = false;
-    }
-  }
-  if (!valid) {
-     e.preventDefault()
-  
-  }else{
-    alert('thank you')
-  }
-
-}
-let btnTop = document.querySelector('.btn-goUp')
-window.addEventListener('scroll', function () {
-  if( pageYOffset > 600){
+let btnTop = document.querySelector(".btn-goUp");
+window.addEventListener("scroll", function () {
+  if (pageYOffset > 600) {
     btnTop.style.display = "block";
-    btnTop.innerHTML = Math.round( pageYOffset)
-}else{
+    btnTop.innerHTML = Math.round(pageYOffset);
+  } else {
     btnTop.style.display = "none";
-}
-
-} )
+  }
+});
 
 btnTop.onclick = function () {
   window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    })
-  
-}
-
+    top: 0,
+    behavior: "smooth",
+  });
+};

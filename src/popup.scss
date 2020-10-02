@@ -12,12 +12,16 @@
 }
 
 .login {
+  height: 260.8px;
   width: 450px;
   min-width: 320px;
   background-color: white;
   position: relative;
   padding: 10px 10px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   &__close {
     position: absolute;
@@ -55,20 +59,20 @@
     text-align: center;
   }
 
-  &__row {
-    border: solid black 0.3px;
-    margin-top: 10px;
-    display: flex;
-  }
-  &__row--error {
-    border: solid red 0.5px;
-    margin-top: 10px;
-    display: flex;
+  &__label{
+    height: 47px;
   }
 
+  &__row {
+    border: solid black 0.3px;
+    display: flex;  
+  }
+ 
+  
   &__input {
     flex-grow: 1;
     padding: 5px;
+    border: none;
   }
   
   &__icon {
@@ -77,31 +81,19 @@
     font-size: 16px;
   }
   &__btn {
-    margin: 15px auto 0px;
+    margin: 0px auto 0px;
     display: block;
     padding: 5px 10px;
   }
-  &__btn-text {
-  }
+ 
 }
-.fas {
-}
-.fa-times {
-}
-.far {
-}
+
 .fa-user {
   margin-right: 5px;
 }
 
 .fa-envelope {
   margin-right: 4px;
-}
-.fa-eye {
-}
-.showPass {
-}
-.fa-paper-plane {
 }
 
 .incorrect{

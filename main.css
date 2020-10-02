@@ -953,12 +953,16 @@ a {
 }
 
 .login {
+  height: 260.8px;
   width: 450px;
   min-width: 320px;
   background-color: white;
   position: relative;
   padding: 10px 10px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .login__close {
   position: absolute;
@@ -991,19 +995,17 @@ a {
 .login__title {
   text-align: center;
 }
+.login__label {
+  height: 47px;
+}
 .login__row {
   border: solid black 0.3px;
-  margin-top: 10px;
-  display: flex;
-}
-.login__row--error {
-  border: solid red 0.5px;
-  margin-top: 10px;
   display: flex;
 }
 .login__input {
   flex-grow: 1;
   padding: 5px;
+  border: none;
 }
 .login__icon {
   align-self: center;
@@ -1011,10 +1013,11 @@ a {
   font-size: 16px;
 }
 .login__btn {
-  margin: 15px auto 0px;
+  margin: 0px auto 0px;
   display: block;
   padding: 5px 10px;
 }
+
 .fa-user {
   margin-right: 5px;
 }
