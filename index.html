@@ -403,8 +403,8 @@
             </div>
             <h2 class="login__title">login</h2>
             <div class="login__label">
-                <div class="login__row">
-                    <input class="login__input" type="text" id="login" name="login">
+                <div class="login__row" id="login">
+                    <input class="login__input" type="text"  name="login">
                     <i class="far fa-user login__icon"></i>
                 </div>
                 <label for="login" class="error" id="login-error"></label>
@@ -412,7 +412,7 @@
 
             <div class="login__label">
                 <div class="login__row">
-                    <input class="login__input" type="text" id="email" name="email">
+                    <input class="login__input" type="text" id="email" name="email" autoComplete="off">
                     <i class="far fa-envelope login__icon"></i>
                 </div>
                 <label for="email" class="error" id="email-error"></label>
@@ -425,6 +425,26 @@
                     <i class="far fa-eye login__icon showPass"></i>
                 </div>
                 <label for="password" class="error" id="password-error"></label>
+            </div>
+
+            <div class="login__label">выберите опцию 
+                <div class="login__Checkbox">
+                    <input type="checkbox" name="checkbox" >
+                    <input type="checkbox" name="checkbox" >
+                    <input type="checkbox" name="checkbox" >
+                    <input type="checkbox" name="checkbox" >
+                    <label for="checkbox" class="error" id="checkbox-error"></label>
+                </div>
+                
+            </div>
+            <div class="login__label">выберите опцию
+                <div class="login__Checkbox">
+                    <input type="radio" name="radio" >
+                    <input type="radio" name="radio" >
+                    <input type="radio" name="radio" >
+                    <label for="radio" class="error" id="radio-error"></label>
+                </div>
+                
             </div>
 
 

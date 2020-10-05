@@ -953,7 +953,7 @@ a {
 }
 
 .login {
-  height: 260.8px;
+  height: 340px;
   width: 450px;
   min-width: 320px;
   background-color: white;
@@ -1001,6 +1001,9 @@ a {
 .login__row {
   border: solid black 0.3px;
   display: flex;
+}
+.login .field-error {
+  border: solid red;
 }
 .login__input {
   flex-grow: 1;

@@ -12,7 +12,7 @@
 }
 
 .login {
-  height: 260.8px;
+  height: 340px;
   width: 450px;
   min-width: 320px;
   background-color: white;
@@ -67,7 +67,9 @@
     border: solid black 0.3px;
     display: flex;  
   }
- 
+  .field-error{
+    border: solid red;
+  }
   
   &__input {
     flex-grow: 1;

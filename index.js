@@ -103,7 +103,6 @@ eye.on("click", function () {
   showPass();
 });
 
-
 $(".popup .login").validate({
   rules: {
     email: {
@@ -114,6 +113,12 @@ $(".popup .login").validate({
       required: true,
     },
     password: {
+      required: true,
+    },
+    checkbox: {
+      required: true,
+    },
+    radio: {
       required: true,
     },
   },
@@ -128,8 +133,24 @@ $(".popup .login").validate({
     password: {
       required: "пожалуйста заполните это поле",
     },
+    checkbox: {
+      required: "пожалуйста виберите опцию",
+    },
+    radio: {
+      required: "пожалуйста виберите опцию",
+    },
+  },
+  highlight: function (element) {
+    if (element.type != "checkbox" && element.type != "radio") {
+      $(element).parent().addClass("field-error");
+    }
+  },
+  unhighlight: function (element) {
+    $(element).parent().removeClass("field-error");
   },
 });
+
+console.log($(".popup .login").validate());
 
 let btnTop = document.querySelector(".btn-goUp");
 window.addEventListener("scroll", function () {
@@ -147,3 +168,20 @@ btnTop.onclick = function () {
     behavior: "smooth",
   });
 };
+let target = document.querySelector(".popup");
+
+function callback(mutationRecords) {
+  console.log(mutationRecords);
+  let filedError = document.querySelectorAll(".field-error");
+  for (let index = 0; index < filedError.length; index++) {
+    filedError[index].classList.toggle("field-error");
+  }
+}
+let observer = new MutationObserver(callback);
+
+observer.observe(target, {
+  childList: false,
+  attributes: true,
+  characterData: true,
+  subtree: false,
+});
