@@ -1,0 +1,30 @@
+{
+  "name": "main2-task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "sass": "^1.26.10"
+  },
+  "devDependencies": {
+    "eslint": "^7.22.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.3.1",
+    "prettier": "^2.2.1"
+  },
+  "scripts": {
+    "lint": "eslint index.js --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vovchanchyk/main2-task.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vovchanchyk/main2-task/issues"
+  },
+  "homepage": "https://github.com/vovchanchyk/main2-task#readme"
+}

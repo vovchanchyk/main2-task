@@ -1,21 +1,21 @@
 // select-------
-let selectHead = $(".select__head");
-let selectItem = $(".select__item");
+const selectHead = $(".select__head");
+const selectItem = $(".select__item");
 
 selectHead.on("click", function () {
   $(this).parent().toggleClass("is-active");
 });
 
 selectItem.on("click", function () {
-  let text = $(this).text();
-  let select = $(this).closest(".select");
-  let currentText = select.find(".select__val");
+  const text = $(this).text();
+  const select = $(this).closest(".select");
+  const currentText = select.find(".select__val");
   currentText.text(text);
   select.toggleClass("is-active");
 });
 
-//клик по экрану------
-$(document).on("click", function (event) {
+// клик по экрану------
+$(document).on("click", (event) => {
   if (
     $(".select").is(event.target) != true &&
     $(".select").has(event.target).length === 0
@@ -25,11 +25,11 @@ $(document).on("click", function (event) {
 });
 
 // поле поиска---------
-let searchF = $(".search__val");
+const searchF = $(".search__val");
 
 function searchIn() {
-  let valInput = $(this).val();
-  let elements = $(".search__item");
+  const valInput = $(this).val();
+  const elements = $(".search__item");
   if (valInput != "") {
     $(this).closest(".search").addClass("is-active");
     elements.each(function (el) {
@@ -63,7 +63,7 @@ function showPopup() {
   $("body").addClass("noscroll");
 }
 
-let inputs = document.querySelectorAll(".login input");
+const inputs = document.querySelectorAll(".login input");
 
 function closePopup() {
   $(".popup").addClass("close");
@@ -76,20 +76,20 @@ function closePopup() {
 
 $("#close").on("click", closePopup);
 
-$(".popup").on("click", function (event) {
+$(".popup").on("click", (event) => {
   if (
-    $(".login").is(event.target) != true &&
+    $(".login").is(event.target) !== true &&
     $(".login").has(event.target).length === 0 &&
-    $(event.target).is("#btn-login") != true
+    $(event.target).is("#btn-login") !== true
   ) {
     closePopup();
   }
 });
 
-let eye = $(".showPass");
+const eye = $(".showPass");
 function showPass() {
-  let input = $("#password");
-  if (input.attr("type") == "password") {
+  const input = $("#password");
+  if (input.attr("type") === "password") {
     input.attr("type", "text");
     eye.toggleClass("fa-eye");
     eye.toggleClass("fa-eye-slash");
@@ -99,7 +99,7 @@ function showPass() {
     eye.toggleClass("fa-eye-slash");
   }
 }
-eye.on("click", function () {
+eye.on("click", () => {
   showPass();
 });
 
@@ -140,20 +140,20 @@ $(".popup .login").validate({
       required: "пожалуйста виберите опцию",
     },
   },
-  highlight: function (element) {
-    if (element.type != "checkbox" && element.type != "radio") {
+  highlight(element) {
+    if (element.type !== "checkbox" && element.type !== "radio") {
       $(element).parent().addClass("field-error");
     }
   },
-  unhighlight: function (element) {
+  unhighlight(element) {
     $(element).parent().removeClass("field-error");
   },
 });
 
 console.log($(".popup .login").validate());
 
-let btnTop = document.querySelector(".btn-goUp");
-window.addEventListener("scroll", function () {
+const btnTop = document.querySelector(".btn-goUp");
+window.addEventListener("scroll", () => {
   if (pageYOffset > 600) {
     btnTop.style.display = "block";
     btnTop.innerHTML = Math.round(pageYOffset);
@@ -168,16 +168,15 @@ btnTop.onclick = function () {
     behavior: "smooth",
   });
 };
-let target = document.querySelector(".popup");
+const target = document.querySelector(".popup");
 
 function callback(mutationRecords) {
-  console.log(mutationRecords);
-  let filedError = document.querySelectorAll(".field-error");
+  const filedError = document.querySelectorAll(".field-error");
   for (let index = 0; index < filedError.length; index++) {
     filedError[index].classList.toggle("field-error");
   }
 }
-let observer = new MutationObserver(callback);
+const observer = new MutationObserver(callback);
 
 observer.observe(target, {
   childList: false,
