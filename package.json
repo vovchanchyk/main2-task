@@ -15,7 +15,8 @@
     "prettier": "^2.2.1"
   },
   "scripts": {
-    "lint": "eslint index.js --fix"
+    "lint": "eslint index.js --fix",
+    "sass":"sass --watch main.scss main.css"
   },
   "repository": {
     "type": "git",
